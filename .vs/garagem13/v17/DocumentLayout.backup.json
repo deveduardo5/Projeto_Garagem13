@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\Projeto_Garagem13\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\dominio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:dominio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\cadastro_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:cadastro_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\inclusao_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:inclusao_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\customizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:customizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\customizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:customizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\cadastro_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:cadastro_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\banco-de-dados\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:banco-de-dados\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|d:\\projeto_garagem13\\dominio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:dominio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,20 +42,56 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "login_usuario.cs",
-              "DocumentMoniker": "D:\\Projeto_Garagem13\\login_usuario.cs",
-              "RelativeDocumentMoniker": "login_usuario.cs",
-              "ToolTip": "D:\\Projeto_Garagem13\\login_usuario.cs*",
-              "RelativeToolTip": "login_usuario.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "customizacao.cs",
+              "DocumentMoniker": "D:\\Projeto_Garagem13\\customizacao.cs",
+              "RelativeDocumentMoniker": "customizacao.cs",
+              "ToolTip": "D:\\Projeto_Garagem13\\customizacao.cs",
+              "RelativeToolTip": "customizacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T22:15:13.261Z",
+              "WhenOpened": "2025-04-28T22:59:50.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "customizacao.cs [Projeto]",
+              "DocumentMoniker": "D:\\Projeto_Garagem13\\customizacao.cs",
+              "RelativeDocumentMoniker": "customizacao.cs",
+              "ToolTip": "D:\\Projeto_Garagem13\\customizacao.cs [Projeto]",
+              "RelativeToolTip": "customizacao.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:59:47.95Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "cadastro_de_cliente.cs [Projeto]",
+              "DocumentMoniker": "D:\\Projeto_Garagem13\\cadastro_de_cliente.cs",
+              "RelativeDocumentMoniker": "cadastro_de_cliente.cs",
+              "ToolTip": "D:\\Projeto_Garagem13\\cadastro_de_cliente.cs [Projeto]",
+              "RelativeToolTip": "cadastro_de_cliente.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:58:04.718Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login_usuario.cs [Projeto]",
+              "DocumentMoniker": "D:\\Projeto_Garagem13\\login_usuario.cs",
+              "RelativeDocumentMoniker": "login_usuario.cs",
+              "ToolTip": "D:\\Projeto_Garagem13\\login_usuario.cs [Projeto]*",
+              "RelativeToolTip": "login_usuario.cs [Projeto]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:57:40.025Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DataBase.cs",
               "DocumentMoniker": "D:\\Projeto_Garagem13\\banco-de-dados\\DataBase.cs",
               "RelativeDocumentMoniker": "banco-de-dados\\DataBase.cs",
@@ -64,49 +104,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "login_usuario.cs [Projeto]",
+              "DocumentIndex": 0,
+              "Title": "login_usuario.cs",
               "DocumentMoniker": "D:\\Projeto_Garagem13\\login_usuario.cs",
               "RelativeDocumentMoniker": "login_usuario.cs",
-              "ToolTip": "D:\\Projeto_Garagem13\\login_usuario.cs [Projeto]*",
-              "RelativeToolTip": "login_usuario.cs [Projeto]*",
+              "ToolTip": "D:\\Projeto_Garagem13\\login_usuario.cs*",
+              "RelativeToolTip": "login_usuario.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T21:39:31.389Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-04-28T22:15:13.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "inclusao_de_cliente.cs [Projeto]",
-              "DocumentMoniker": "D:\\Projeto_Garagem13\\inclusao_de_cliente.cs",
-              "RelativeDocumentMoniker": "inclusao_de_cliente.cs",
-              "ToolTip": "D:\\Projeto_Garagem13\\inclusao_de_cliente.cs [Projeto]",
-              "RelativeToolTip": "inclusao_de_cliente.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T21:46:08.314Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "cadastro_de_cliente.cs [Projeto]",
-              "DocumentMoniker": "D:\\Projeto_Garagem13\\cadastro_de_cliente.cs",
-              "RelativeDocumentMoniker": "cadastro_de_cliente.cs",
-              "ToolTip": "D:\\Projeto_Garagem13\\cadastro_de_cliente.cs [Projeto]",
-              "RelativeToolTip": "cadastro_de_cliente.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T21:42:56.702Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Cliente.cs",
               "DocumentMoniker": "D:\\Projeto_Garagem13\\Dominio\\Cliente.cs",
               "RelativeDocumentMoniker": "Dominio\\Cliente.cs",
               "ToolTip": "D:\\Projeto_Garagem13\\Dominio\\Cliente.cs",
               "RelativeToolTip": "Dominio\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T21:37:54.978Z",
               "EditorCaption": ""

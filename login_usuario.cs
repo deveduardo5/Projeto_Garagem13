@@ -12,6 +12,10 @@ namespace garagem13
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
+            Form login_usuario = new cadastro_de_cliente();
+            login_usuario.Show();
+            this.Hide();
+
             string email = textBoxEmail.Text.Trim();
             string senha = textBoxSenha.Text;
 
