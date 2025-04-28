@@ -1,12 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\eduar\\source\\repos\\garagem13\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\banco-de-dados\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:banco-de-dados\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:login_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\orcamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:orcamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\revisao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:revisao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\customizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:customizacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\inclusao_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:inclusao_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|c:\\users\\eduardo.asouza23\\source\\repos\\projeto_garagem13\\cadastro_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6CB9E1F5-1340-4201-86AA-3875FD7CB3E3}|garagem13.csproj|solutionrelative:cadastro_de_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataBase.cs",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\banco-de-dados\\DataBase.cs",
+              "RelativeDocumentMoniker": "banco-de-dados\\DataBase.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\banco-de-dados\\DataBase.cs*",
+              "RelativeToolTip": "banco-de-dados\\DataBase.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:09:30.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "orcamento.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\orcamento.cs",
+              "RelativeDocumentMoniker": "orcamento.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\orcamento.cs [Projeto]",
+              "RelativeToolTip": "orcamento.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:08:10.687Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "revisao.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\revisao.cs",
+              "RelativeDocumentMoniker": "revisao.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\revisao.cs [Projeto]",
+              "RelativeToolTip": "revisao.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:08:06.11Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "customizacao.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\customizacao.cs",
+              "RelativeDocumentMoniker": "customizacao.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\customizacao.cs [Projeto]",
+              "RelativeToolTip": "customizacao.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:08:01.684Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "inclusao_de_cliente.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\inclusao_de_cliente.cs",
+              "RelativeDocumentMoniker": "inclusao_de_cliente.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\inclusao_de_cliente.cs [Projeto]",
+              "RelativeToolTip": "inclusao_de_cliente.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:07:59.03Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "cadastro_de_cliente.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\cadastro_de_cliente.cs",
+              "RelativeDocumentMoniker": "cadastro_de_cliente.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\cadastro_de_cliente.cs [Projeto]",
+              "RelativeToolTip": "cadastro_de_cliente.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:07:55.115Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login_usuario.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\login_usuario.cs",
+              "RelativeDocumentMoniker": "login_usuario.cs",
+              "ToolTip": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\login_usuario.cs [Projeto]",
+              "RelativeToolTip": "login_usuario.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:07:40.4Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

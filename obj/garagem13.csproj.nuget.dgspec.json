@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projeto_Garagem13\\garagem13.csproj": {}
+    "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\garagem13.csproj": {}
   },
   "projects": {
-    "D:\\Projeto_Garagem13\\garagem13.csproj": {
+    "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\garagem13.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projeto_Garagem13\\garagem13.csproj",
+        "projectUniqueName": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\garagem13.csproj",
         "projectName": "garagem13",
-        "projectPath": "D:\\Projeto_Garagem13\\garagem13.csproj",
-        "packagesPath": "C:\\Users\\emily.mssantos1\\.nuget\\packages\\",
-        "outputPath": "D:\\Projeto_Garagem13\\obj\\",
+        "projectPath": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\garagem13.csproj",
+        "packagesPath": "C:\\Users\\eduardo.asouza23\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduardo.asouza23\\source\\repos\\Projeto_Garagem13\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\emily.mssantos1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eduardo.asouza23\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
