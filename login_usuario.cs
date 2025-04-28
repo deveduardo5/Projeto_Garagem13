@@ -28,31 +28,10 @@ namespace garagem13
                 return;
             }
 
-            DataBase conn = new DataBase();
-            string query = "SELECT * FROM funcionario WHERE email = @email AND senha = @senha";
+        }  
+        private void login_usuario_Load(object sender, EventArgs e)
+        {
 
-            using (MySqlCommand cmd = new MySqlCommand(query, conn.AbrirConexao()))
-            {
-                cmd.Parameters.AddWithValue("@email", textBoxEmail.Text);
-                cmd.Parameters.AddWithValue("@senha", textBoxSenha.Text);
-
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
-                        MessageBox.Show("Login realizado com sucesso!");
-                        Form login_usuario = new cadastro_de_cliente();
-                        login_usuario.Show();
-                        this.Hide();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Email ou senha inválidos!");
-                    }
-                }
-                conn.FecharConexao();
-            }
         }
     }
 }

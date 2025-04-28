@@ -31,17 +31,19 @@
             buttonEntrar = new Button();
             textBoxSenha = new TextBox();
             textBoxEmail = new TextBox();
-            labelErroLogin = new Label();
             labelSenha = new Label();
             labelEmail = new Label();
             labelTitulo = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // buttonEntrar
             // 
-            buttonEntrar.Location = new Point(370, 316);
+            buttonEntrar.Location = new Point(331, 283);
+            buttonEntrar.Margin = new Padding(3, 2, 3, 2);
             buttonEntrar.Name = "buttonEntrar";
-            buttonEntrar.Size = new Size(94, 29);
+            buttonEntrar.Size = new Size(82, 22);
             buttonEntrar.TabIndex = 13;
             buttonEntrar.Text = "Entrar";
             buttonEntrar.UseVisualStyleBackColor = true;
@@ -49,42 +51,35 @@
             // 
             // textBoxSenha
             // 
-            textBoxSenha.Location = new Point(319, 216);
+            textBoxSenha.Location = new Point(279, 230);
+            textBoxSenha.Margin = new Padding(3, 2, 3, 2);
             textBoxSenha.Name = "textBoxSenha";
-            textBoxSenha.Size = new Size(229, 27);
+            textBoxSenha.Size = new Size(201, 23);
             textBoxSenha.TabIndex = 12;
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(319, 173);
+            textBoxEmail.Location = new Point(279, 194);
+            textBoxEmail.Margin = new Padding(3, 2, 3, 2);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(229, 27);
+            textBoxEmail.Size = new Size(201, 23);
             textBoxEmail.TabIndex = 11;
-            // 
-            // labelErroLogin
-            // 
-            labelErroLogin.AutoSize = true;
-            labelErroLogin.Location = new Point(349, 272);
-            labelErroLogin.Name = "labelErroLogin";
-            labelErroLogin.Size = new Size(12, 20);
-            labelErroLogin.TabIndex = 10;
-            labelErroLogin.Text = ".";
             // 
             // labelSenha
             // 
             labelSenha.AutoSize = true;
-            labelSenha.Location = new Point(256, 219);
+            labelSenha.Location = new Point(223, 238);
             labelSenha.Name = "labelSenha";
-            labelSenha.Size = new Size(49, 20);
+            labelSenha.Size = new Size(39, 15);
             labelSenha.TabIndex = 9;
             labelSenha.Text = "Senha";
             // 
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(253, 176);
+            labelEmail.Location = new Point(223, 202);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(52, 20);
+            labelEmail.Size = new Size(41, 15);
             labelEmail.TabIndex = 8;
             labelEmail.Text = "E-mail";
             // 
@@ -93,26 +88,39 @@
             labelTitulo.AutoSize = true;
             labelTitulo.BackColor = SystemColors.Control;
             labelTitulo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(307, 106);
+            labelTitulo.Location = new Point(279, 159);
             labelTitulo.Name = "labelTitulo";
-            labelTitulo.Size = new Size(215, 28);
+            labelTitulo.Size = new Size(170, 21);
             labelTitulo.TabIndex = 7;
             labelTitulo.Text = "Entre com seu usuário";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.original_0E2F809E_0FEB_45EE_B16D_009238021042;
+            pictureBox1.Location = new Point(244, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(269, 155);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
+            // 
             // login_usuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
+            Controls.Add(pictureBox1);
             Controls.Add(buttonEntrar);
             Controls.Add(textBoxSenha);
             Controls.Add(textBoxEmail);
-            Controls.Add(labelErroLogin);
             Controls.Add(labelSenha);
             Controls.Add(labelEmail);
             Controls.Add(labelTitulo);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "login_usuario";
             Text = "login_usuario";
+            Load += login_usuario_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -122,9 +130,9 @@
         private Button buttonEntrar;
         private TextBox textBoxSenha;
         private TextBox textBoxEmail;
-        private Label labelErroLogin;
         private Label labelSenha;
         private Label labelEmail;
         private Label labelTitulo;
+        private PictureBox pictureBox1;
     }
 }
