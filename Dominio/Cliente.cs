@@ -17,6 +17,7 @@ namespace garagem13.dominio
         {
             if (!Validar()) return false;
 
+
             repositorio.Criar(this);
             return true;
         }
