@@ -7,24 +7,33 @@ namespace garagem13.Repositorio
 {
     internal class FuncionarioRepositorio
     {
-        public void Criar(Funcionario funcionario)
-        {
-            using (var con = DataBase.GetConnection())
-            {
-                con.Open();
-                string query = "INSERT INTO funcionario (nome, email, senha) VALUES (@nome, @email, @senha);";
+        //    public void AdicionarFuncionarios()
+        //    {
+        //        List<Funcionario> funcionarios = new List<Funcionario>
+        //{
+        //    new Funcionario { Nome = "Matheus Selpa", Email = "mselpa@garagem13.com", Senha = "24681012" },
+        //    new Funcionario { Nome = "Gabriel Gomes", Email = "ggomes@garagem13.com", Senha = "12345678" },
+        //    new Funcionario { Nome = "Daniel Silva", Email = "dsilva@garagem13.com", Senha = "36912157" }
+        //};
+        //        using (var con = DataBase.GetConnection())
+        //        {
+        //            con.Open();
+        //            foreach (var funcionario in funcionarios)
+        //            {
+        //                string query = "INSERT INTO funcionario (nome, email, senha) VALUES (@nome, @email, @senha);";
+        //                using (var cmd = new MySqlCommand(query, con))
+        //                {
+        //                    cmd.Parameters.AddWithValue("@nome", funcionario.Nome);
+        //                    cmd.Parameters.AddWithValue("@email", funcionario.Email);
+        //                    cmd.Parameters.AddWithValue("@senha", funcionario.Senha);
+        //                    cmd.ExecuteNonQuery();
+        //                }
+        //            }
+        //        }
+        //    }
 
-                using (var cmd = new MySqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@nome", funcionario.Nome);
-                    cmd.Parameters.AddWithValue("@email", funcionario.Email);
-                    cmd.Parameters.AddWithValue("@senha", funcionario.Senha);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-        }
 
-        public Funcionario BuscarPorEmailSenha(string email, string senha)
+        public Funcionario? BuscarPorEmailSenha(string email, string senha)
         {
             using (var con = DataBase.GetConnection())
             {
@@ -34,6 +43,7 @@ namespace garagem13.Repositorio
                 {
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@senha", senha);
+
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())

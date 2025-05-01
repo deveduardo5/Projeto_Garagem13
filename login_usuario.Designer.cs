@@ -119,7 +119,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "login_usuario";
             Text = "login_usuario";
-            Load += login_usuario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

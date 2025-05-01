@@ -1,5 +1,4 @@
-﻿using garagem13.banco_de_dados;
-using MySql.Data.MySqlClient;
+﻿using garagem13.dominio;
 
 namespace garagem13
 {
@@ -12,31 +11,45 @@ namespace garagem13
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
-            Form login_usuario = new cadastro_de_cliente();
-            login_usuario.Show();
-            this.Hide();
-
             string email = textBoxEmail.Text.Trim();
             string senha = textBoxSenha.Text;
 
             // Validação de campos
+
             if (string.IsNullOrEmpty(email))
             {
-                MessageBox.Show("O campo de e-mail não pode estar vazio.");
+                MessageBox.Show("Informe e-mail e senha validos");
+                return;
+            }
+            if (string.IsNullOrEmpty(email) || string.IsNullOrWhiteSpace(senha))
+
+            {
+                MessageBox.Show("Informe e-mail e senha validos");
                 return;
             }
 
             if (string.IsNullOrEmpty(senha) || senha.Length < 8)
             {
-                MessageBox.Show("A senha deve conter no mínimo 8 caracteres.");
+                MessageBox.Show("Senha incorreta.");
                 return;
             }
+            var funcionario = new Funcionario
+            {
+                Email = textBoxEmail.Text,
+                Senha = textBoxSenha.Text
+            };
+            var funcionarioLogado = funcionario.Login();
 
-
-        }  
-        private void login_usuario_Load(object sender, EventArgs e)
-        {
-
+            if (funcionarioLogado != null)
+            {
+                var formularioCadastroCliente = new cadastro_de_cliente();
+                formularioCadastroCliente.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Email ou senha inválidos.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
