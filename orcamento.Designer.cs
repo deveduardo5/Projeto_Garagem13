@@ -1,6 +1,6 @@
 ﻿namespace garagem13
 {
-    partial class orcamento
+    partial class TelaOrcamento
     {
         /// <summary>
         /// Required designer variable.
@@ -65,7 +65,7 @@
             buttonCancelarO.UseVisualStyleBackColor = true;
             buttonCancelarO.Click += buttonCancelarO_Click;
             // 
-            // orcamento
+            // TelaOrcamento
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -73,8 +73,8 @@
             Controls.Add(buttonConcluirO);
             Controls.Add(buttonAlterarO);
             Controls.Add(buttonCancelarO);
-            Name = "orcamento";
-            Text = "orcamento";
+            Name = "TelaOrcamento";
+            Text = "Orcamento";
             ResumeLayout(false);
         }
 

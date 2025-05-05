@@ -1,6 +1,6 @@
 ﻿namespace garagem13
 {
-    partial class cadastro_de_cliente
+    partial class TelaCadastroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -39,20 +39,18 @@
             // 
             // buttonPesquisarCC
             // 
-            buttonPesquisarCC.Location = new Point(534, 9);
-            buttonPesquisarCC.Margin = new Padding(3, 2, 3, 2);
+            buttonPesquisarCC.Location = new Point(610, 12);
             buttonPesquisarCC.Name = "buttonPesquisarCC";
-            buttonPesquisarCC.Size = new Size(156, 22);
+            buttonPesquisarCC.Size = new Size(178, 29);
             buttonPesquisarCC.TabIndex = 0;
             buttonPesquisarCC.Text = "Pesquisar";
             buttonPesquisarCC.UseVisualStyleBackColor = true;
             // 
             // buttonIncluirCC
             // 
-            buttonIncluirCC.Location = new Point(10, 307);
-            buttonIncluirCC.Margin = new Padding(3, 2, 3, 2);
+            buttonIncluirCC.Location = new Point(11, 409);
             buttonIncluirCC.Name = "buttonIncluirCC";
-            buttonIncluirCC.Size = new Size(156, 22);
+            buttonIncluirCC.Size = new Size(178, 29);
             buttonIncluirCC.TabIndex = 1;
             buttonIncluirCC.Text = "Incluir";
             buttonIncluirCC.UseVisualStyleBackColor = true;
@@ -60,56 +58,52 @@
             // 
             // buttonDeletarCC
             // 
-            buttonDeletarCC.Location = new Point(275, 307);
-            buttonDeletarCC.Margin = new Padding(3, 2, 3, 2);
+            buttonDeletarCC.Location = new Point(314, 409);
             buttonDeletarCC.Name = "buttonDeletarCC";
-            buttonDeletarCC.Size = new Size(156, 22);
+            buttonDeletarCC.Size = new Size(178, 29);
             buttonDeletarCC.TabIndex = 2;
             buttonDeletarCC.Text = "Deletar";
             buttonDeletarCC.UseVisualStyleBackColor = true;
             // 
             // buttonCustomizacaoCC
             // 
-            buttonCustomizacaoCC.Location = new Point(534, 307);
-            buttonCustomizacaoCC.Margin = new Padding(3, 2, 3, 2);
+            buttonCustomizacaoCC.Location = new Point(610, 409);
             buttonCustomizacaoCC.Name = "buttonCustomizacaoCC";
-            buttonCustomizacaoCC.Size = new Size(156, 22);
+            buttonCustomizacaoCC.Size = new Size(178, 29);
             buttonCustomizacaoCC.TabIndex = 3;
             buttonCustomizacaoCC.Text = "Customização";
             buttonCustomizacaoCC.UseVisualStyleBackColor = true;
+            buttonCustomizacaoCC.Click += buttonCustomizacaoCC_Click_1;
             // 
             // textBoxPesquisarCC
             // 
-            textBoxPesquisarCC.Location = new Point(10, 9);
-            textBoxPesquisarCC.Margin = new Padding(3, 2, 3, 2);
+            textBoxPesquisarCC.Location = new Point(11, 12);
             textBoxPesquisarCC.Name = "textBoxPesquisarCC";
-            textBoxPesquisarCC.Size = new Size(506, 23);
+            textBoxPesquisarCC.Size = new Size(578, 27);
             textBoxPesquisarCC.TabIndex = 4;
             // 
             // dataGridViewCadastroCliente
             // 
             dataGridViewCadastroCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCadastroCliente.Location = new Point(10, 50);
-            dataGridViewCadastroCliente.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewCadastroCliente.Location = new Point(11, 67);
             dataGridViewCadastroCliente.Name = "dataGridViewCadastroCliente";
             dataGridViewCadastroCliente.RowHeadersWidth = 51;
-            dataGridViewCadastroCliente.Size = new Size(679, 232);
+            dataGridViewCadastroCliente.Size = new Size(776, 309);
             dataGridViewCadastroCliente.TabIndex = 5;
             // 
-            // cadastro_de_cliente
+            // TelaCadastroCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(800, 451);
             Controls.Add(dataGridViewCadastroCliente);
             Controls.Add(textBoxPesquisarCC);
             Controls.Add(buttonCustomizacaoCC);
             Controls.Add(buttonDeletarCC);
             Controls.Add(buttonIncluirCC);
             Controls.Add(buttonPesquisarCC);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "cadastro_de_cliente";
-            Text = "cadastro_de_cliente";
+            Name = "TelaCadastroCliente";
+            Text = "CadastroCliente";
             ((System.ComponentModel.ISupportInitialize)dataGridViewCadastroCliente).EndInit();
             ResumeLayout(false);
             PerformLayout();

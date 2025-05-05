@@ -21,7 +21,7 @@ namespace garagem13.Repositorio
                     cmd.Parameters.AddWithValue("@bairro", endereco.Bairro);
                     cmd.Parameters.AddWithValue("@municipio", endereco.Municipio);
                     cmd.Parameters.AddWithValue("@estado", endereco.Estado);
-                    cmd.Parameters.AddWithValue("@cep", endereco.Cep);
+                    cmd.Parameters.AddWithValue("@cep", endereco.CEP);
                     cmd.ExecuteNonQuery();
                 }
             }

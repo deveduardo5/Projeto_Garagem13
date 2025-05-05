@@ -49,10 +49,5 @@ namespace garagem13.dominio
             }
             return repositorio.BuscarPorEmailSenha(Email, Senha);
         }
-
-        private bool Validar()
-        {
-            return !string.IsNullOrWhiteSpace(Nome) && !string.IsNullOrWhiteSpace(Email) && Email.Contains("@") && !string.IsNullOrWhiteSpace(Senha) && Senha.Length >= 8;
-        }
     }
 }

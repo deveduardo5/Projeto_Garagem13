@@ -1,23 +1,23 @@
 ﻿namespace garagem13
 {
-    public partial class customizacao : Form
+    public partial class TelaCustomizacao : Form
     {
-        public customizacao()
+        public TelaCustomizacao()
         {
             InitializeComponent();
         }
 
         private void buttonCriarPedidoC_Click(object sender, EventArgs e)
         {
-            Form customizacao = new revisao();
-            customizacao.Show();
+            Form TelaCustomizacao = new TelaRevisao();
+            TelaCustomizacao.Show();
             this.Hide();
         }
 
         private void buttonVoltarC_Click(object sender, EventArgs e)
         {
-            Form customizacao = new cadastro_de_cliente();
-            customizacao.Show();
+            Form TelaCustomizacao = new TelaCadastroCliente();
+            TelaCustomizacao.Show();
             this.Hide();
         }
     }

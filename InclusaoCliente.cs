@@ -1,0 +1,113 @@
+﻿using garagem13.dominio;
+
+namespace garagem13
+{
+    public partial class TelaInclusaoCliente : Form
+    {
+        private Cliente Cliente = new()
+        {
+            Endereco = new()
+        };
+
+        private readonly BindingSource BindingSource = new BindingSource();
+
+        private TelaCadastroCliente _telaCadastro;
+
+        public TelaInclusaoCliente(TelaCadastroCliente telaCadastro)
+        {
+            InitializeComponent();
+            _telaCadastro = telaCadastro;
+        }
+
+        private bool CriarCliente()
+        {
+            Cliente = new Cliente();
+            Cliente.Endereco = new Endereco();
+
+            Cliente.Endereco.Logradouro = textBoxLogradouro.Text;
+            Cliente.Endereco.Numero = textBoxNumero.Text;
+            Cliente.Endereco.Bairro = textBoxBairro.Text;
+            Cliente.Endereco.CEP = maskedTextBoxCEP.Text.Replace("-", "");
+            Cliente.Endereco.Municipio = textBoxMunicipio.Text;
+            Cliente.Endereco.Estado = textBoxEstado.Text;
+            Cliente.Endereco.Complemento = textBoxComplemento.Text;
+
+            Cliente.Nome = textBoxNome.Text;
+            Cliente.Idade = textBoxIdade.Text;
+            Cliente.Email = textBoxEmail.Text;
+            Cliente.Telefone = maskedTextBoxTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
+
+            string validacaoEndereco = Cliente.Endereco.Validar();
+            if (!string.IsNullOrWhiteSpace(validacaoEndereco))
+            {
+                labelErro.Text = validacaoEndereco;
+                return false;
+            }
+
+            string validacaoCLiente = Cliente.Validar();
+            if (!string.IsNullOrWhiteSpace(validacaoCLiente))
+            {
+                labelErro.Text = validacaoCLiente;
+                return false;
+            }
+
+            return true;
+        }
+
+        private void LimparForm()
+        {
+            textBoxNome.Clear();
+            textBoxIdade.Clear();
+            textBoxEmail.Clear();
+            maskedTextBoxTelefone.Clear();
+
+            textBoxLogradouro.Clear();
+            textBoxNumero.Clear();
+            textBoxBairro.Clear();
+            maskedTextBoxCEP.Clear();
+            textBoxMunicipio.Clear();
+            textBoxEstado.Clear();
+            textBoxComplemento.Clear();
+
+            labelErro.Text = string.Empty;
+        }
+
+        private void buttonIncluirIC_Click(object sender, EventArgs e)
+        {
+            if (!CriarCliente())
+                return;
+
+            Cliente.InserirCliente();
+
+            _telaCadastro.AtualizarGrid();
+
+            LimparForm();
+
+            _telaCadastro.Show();
+            this.Hide();
+
+            //if (!CriarCliente())
+            //{
+            //    return;
+            //}
+
+            //Cliente.InserirCliente();
+            //BindingSource.DataSource = Cliente.ListarClientes();
+            //Form TelaInclusaoCliente.dataGridViewCadastroCliente.DataSource = BindingSource;
+
+            //LimparForm();
+
+
+            //Form inclusao_de_cliente = new TelaCadastroCliente();
+            //inclusao_de_cliente.Show();
+            //this.Hide();
+        }
+
+        private void buttonVoltarIC_Click_1(object sender, EventArgs e)
+        {
+            Form TelaInclusaoCliente = new TelaCadastroCliente();
+            TelaInclusaoCliente.Show();
+            this.Hide();
+        }
+    }
+}

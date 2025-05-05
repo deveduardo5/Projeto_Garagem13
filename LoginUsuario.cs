@@ -2,29 +2,23 @@
 
 namespace garagem13
 {
-    public partial class login_usuario : Form
+    public partial class TelaLoginUsuario : Form
     {
-        public login_usuario()
+        public TelaLoginUsuario()
         {
             InitializeComponent();
         }
 
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
-            string email = textBoxEmail.Text.Trim();
-            string senha = textBoxSenha.Text;
+            string email = textBoxEmailLU.Text.Trim();
+            string senha = textBoxSenhaLU.Text;
 
-            // Validação de campos
+            //Validação de campos
 
-            if (string.IsNullOrEmpty(email))
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
             {
-                MessageBox.Show("Informe e-mail e senha validos");
-                return;
-            }
-            if (string.IsNullOrEmpty(email) || string.IsNullOrWhiteSpace(senha))
-
-            {
-                MessageBox.Show("Informe e-mail e senha validos");
+                MessageBox.Show("Preencha e-mail e senha corretamente!");
                 return;
             }
 
@@ -33,17 +27,17 @@ namespace garagem13
                 MessageBox.Show("Senha incorreta.");
                 return;
             }
+
             var funcionario = new Funcionario
             {
-                Email = textBoxEmail.Text,
-                Senha = textBoxSenha.Text
+                Email = textBoxEmailLU.Text,
+                Senha = textBoxSenhaLU.Text
             };
             var funcionarioLogado = funcionario.Login();
-
             if (funcionarioLogado != null)
             {
-                var formularioCadastroCliente = new cadastro_de_cliente();
-                formularioCadastroCliente.Show();
+                var TelaLoginUsuario = new TelaCadastroCliente();
+                TelaLoginUsuario.ShowDialog();
                 this.Hide();
             }
             else

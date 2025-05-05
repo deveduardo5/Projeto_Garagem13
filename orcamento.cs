@@ -1,23 +1,23 @@
 ﻿namespace garagem13
 {
-    public partial class orcamento : Form
+    public partial class TelaOrcamento : Form
     {
-        public orcamento()
+        public TelaOrcamento()
         {
             InitializeComponent();
         }
 
         private void buttonCancelarO_Click(object sender, EventArgs e)
         {
-            Form orcamento = new cadastro_de_cliente();
-            orcamento.Show();
+            Form TelaOrcamento = new TelaCadastroCliente();
+            TelaOrcamento.Show();
             this.Hide();
         }
 
         private void buttonAlterarO_Click(object sender, EventArgs e)
         {
-            Form orcamento = new customizacao();
-            orcamento.Show();
+            Form TelaOrcamento = new TelaCustomizacao();
+            TelaOrcamento.Show();
             this.Hide();
         }
     }

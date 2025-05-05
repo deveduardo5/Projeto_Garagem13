@@ -1,6 +1,6 @@
 ﻿namespace garagem13
 {
-    partial class customizacao
+    partial class TelaCustomizacao
     {
         /// <summary>
         /// Required designer variable.
@@ -54,15 +54,15 @@
             buttonCriarPedidoC.UseVisualStyleBackColor = true;
             buttonCriarPedidoC.Click += buttonCriarPedidoC_Click;
             // 
-            // customizacao
+            // TelaCustomizacao
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonVoltarC);
             Controls.Add(buttonCriarPedidoC);
-            Name = "customizacao";
-            Text = "customizacao";
+            Name = "TelaCustomizacao";
+            Text = "Customizacao";
             ResumeLayout(false);
         }
 

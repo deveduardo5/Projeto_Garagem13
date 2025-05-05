@@ -1,6 +1,6 @@
 ﻿namespace garagem13
 {
-    partial class revisao
+    partial class TelaRevisao
     {
         /// <summary>
         /// Required designer variable.
@@ -54,15 +54,15 @@
             buttonProsseguirR.UseVisualStyleBackColor = true;
             buttonProsseguirR.Click += buttonProsseguirR_Click;
             // 
-            // revisao
+            // TelaRevisao
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonVoltarR);
             Controls.Add(buttonProsseguirR);
-            Name = "revisao";
-            Text = "revisao";
+            Name = "TelaRevisao";
+            Text = "Revisao";
             ResumeLayout(false);
         }
 

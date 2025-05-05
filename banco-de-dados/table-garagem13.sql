@@ -19,7 +19,7 @@ CREATE TABLE endereco (
 CREATE TABLE cliente (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) NOT NULL,
-    idade INT NOT NULL,
+    idade VARCHAR(3) NOT NULL,
     id_endereco INT NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
     telefone VARCHAR(15) NOT NULL,
@@ -143,9 +143,7 @@ VALUES
 ('Gabriel Gomes', 'ggomes@garagem13.com', '12345678'),
 ('Daniel Silva', 'dsilva@garagem13.com', '36912157');
 
-
-
-SELECT 
+SELECT
     c.id AS customizacao_id,
     c.tipo AS tipo_bike,
     c.cliente_id,

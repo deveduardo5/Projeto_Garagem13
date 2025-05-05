@@ -1,6 +1,4 @@
-﻿using garagem13.Repositorio;
-
-namespace garagem13.dominio
+﻿namespace garagem13.dominio
 {
     internal class Endereco
     {
@@ -11,27 +9,32 @@ namespace garagem13.dominio
         public string? Bairro { get; set; }
         public string? Municipio { get; set; }
         public string? Estado { get; set; }
-        public string? Cep { get; set; }
+        public string? CEP { get; set; }
 
-        private readonly EnderecoRepositorio repositorio = new();
-
-        public bool Criar()
+        public string Validar()
         {
-            if (!Validar()) return false;
-            repositorio.Criar(this);
-            return true;
-        }
+            if (string.IsNullOrWhiteSpace(Logradouro))
+            {
+                return "O campo Logradouro é obrigatório";
+            }
 
-        private bool Validar()
-        {
-            return !string.IsNullOrWhiteSpace(Logradouro)
-                && !string.IsNullOrWhiteSpace(Numero)
-                && !string.IsNullOrWhiteSpace(Bairro)
-                && !string.IsNullOrWhiteSpace(Municipio)
-                && !string.IsNullOrWhiteSpace(Estado)
-                && !string.IsNullOrWhiteSpace(Cep)
-                && Estado.Length == 2
-                && Cep.Length == 8;
+            if (string.IsNullOrWhiteSpace(Numero))
+            {
+                return "O campo Número é obrigatório";
+            }
+
+            if (string.IsNullOrWhiteSpace(Bairro))
+            {
+                return "O campo Bairro é obrigatório";
+            }
+
+            if (string.IsNullOrWhiteSpace(CEP) || CEP.Length != 8)
+            {
+                return "O campo CEP é obrigatório";
+            }
+
+            return string.Empty;
         }
     }
 }
+
