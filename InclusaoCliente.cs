@@ -11,12 +11,9 @@ namespace garagem13
 
         private readonly BindingSource BindingSource = new BindingSource();
 
-        private TelaCadastroCliente _telaCadastro;
-
         public TelaInclusaoCliente(TelaCadastroCliente telaCadastro)
         {
             InitializeComponent();
-            _telaCadastro = telaCadastro;
         }
 
         private bool CriarCliente()
@@ -75,32 +72,16 @@ namespace garagem13
         private void buttonIncluirIC_Click(object sender, EventArgs e)
         {
             if (!CriarCliente())
+            {
                 return;
+            }
 
             Cliente.InserirCliente();
-
-            _telaCadastro.AtualizarGrid();
-
             LimparForm();
 
-            _telaCadastro.Show();
+            Form inclusao_de_cliente = new TelaCadastroCliente();
+            inclusao_de_cliente.Show();
             this.Hide();
-
-            //if (!CriarCliente())
-            //{
-            //    return;
-            //}
-
-            //Cliente.InserirCliente();
-            //BindingSource.DataSource = Cliente.ListarClientes();
-            //Form TelaInclusaoCliente.dataGridViewCadastroCliente.DataSource = BindingSource;
-
-            //LimparForm();
-
-
-            //Form inclusao_de_cliente = new TelaCadastroCliente();
-            //inclusao_de_cliente.Show();
-            //this.Hide();
         }
 
         private void buttonVoltarIC_Click_1(object sender, EventArgs e)

@@ -36,6 +36,11 @@ namespace garagem13
             dataGridViewCadastroCliente.DataSource = bs;
         }
 
+        private void TelaCadastroCliente_Load(object sender, EventArgs e)
+        {
+            AtualizarGrid();
+        }
+
         //private void FormCadastroCliente_Load(object sender, EventArgs e)
         //{
 
