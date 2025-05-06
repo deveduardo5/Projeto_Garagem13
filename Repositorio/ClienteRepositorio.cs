@@ -71,6 +71,11 @@ namespace garagem13.Repositorio
                                        "VALUES (@logradouro, @numero, @bairro, @municipio, @estado, @cep, @complemento);";
                 using (var cmd = new MySqlCommand(queryEndereco, conn))
                 {
+                    if (novoCliente.Endereco == null)
+                    {
+                        throw new ArgumentNullException(nameof(novoCliente.Endereco), "O endereço do cliente não pode ser nulo.");
+                    }
+
                     cmd.Parameters.AddWithValue("@logradouro", novoCliente.Endereco.Logradouro);
                     cmd.Parameters.AddWithValue("@numero", novoCliente.Endereco.Numero);
                     cmd.Parameters.AddWithValue("@bairro", novoCliente.Endereco.Bairro);
