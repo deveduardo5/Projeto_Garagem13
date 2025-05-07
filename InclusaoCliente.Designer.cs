@@ -225,6 +225,7 @@
             // 
             textBoxEstado.Location = new Point(457, 228);
             textBoxEstado.Margin = new Padding(3, 2, 3, 2);
+            textBoxEstado.MaxLength = 2;
             textBoxEstado.Name = "textBoxEstado";
             textBoxEstado.Size = new Size(210, 23);
             textBoxEstado.TabIndex = 23;

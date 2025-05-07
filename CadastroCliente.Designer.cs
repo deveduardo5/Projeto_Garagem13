@@ -28,45 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonPesquisarCC = new Button();
-            buttonIncluirCC = new Button();
-            buttonDeletarCC = new Button();
+            buttonCriarClienteCC = new Button();
             buttonCustomizacaoCC = new Button();
-            textBoxPesquisarCC = new TextBox();
             dataGridViewCadastroCliente = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCadastroCliente).BeginInit();
             SuspendLayout();
             // 
-            // buttonPesquisarCC
+            // buttonCriarClienteCC
             // 
-            buttonPesquisarCC.Location = new Point(534, 9);
-            buttonPesquisarCC.Margin = new Padding(3, 2, 3, 2);
-            buttonPesquisarCC.Name = "buttonPesquisarCC";
-            buttonPesquisarCC.Size = new Size(156, 22);
-            buttonPesquisarCC.TabIndex = 0;
-            buttonPesquisarCC.Text = "Pesquisar";
-            buttonPesquisarCC.UseVisualStyleBackColor = true;
-            // 
-            // buttonIncluirCC
-            // 
-            buttonIncluirCC.Location = new Point(10, 307);
-            buttonIncluirCC.Margin = new Padding(3, 2, 3, 2);
-            buttonIncluirCC.Name = "buttonIncluirCC";
-            buttonIncluirCC.Size = new Size(156, 22);
-            buttonIncluirCC.TabIndex = 1;
-            buttonIncluirCC.Text = "Incluir";
-            buttonIncluirCC.UseVisualStyleBackColor = true;
-            buttonIncluirCC.Click += buttonIncluirCC_Click;
-            // 
-            // buttonDeletarCC
-            // 
-            buttonDeletarCC.Location = new Point(275, 307);
-            buttonDeletarCC.Margin = new Padding(3, 2, 3, 2);
-            buttonDeletarCC.Name = "buttonDeletarCC";
-            buttonDeletarCC.Size = new Size(156, 22);
-            buttonDeletarCC.TabIndex = 2;
-            buttonDeletarCC.Text = "Deletar";
-            buttonDeletarCC.UseVisualStyleBackColor = true;
+            buttonCriarClienteCC.Location = new Point(10, 307);
+            buttonCriarClienteCC.Margin = new Padding(3, 2, 3, 2);
+            buttonCriarClienteCC.Name = "buttonCriarClienteCC";
+            buttonCriarClienteCC.Size = new Size(156, 22);
+            buttonCriarClienteCC.TabIndex = 1;
+            buttonCriarClienteCC.Text = "Criar Cliente";
+            buttonCriarClienteCC.UseVisualStyleBackColor = true;
+            buttonCriarClienteCC.Click += buttonIncluirCC_Click;
             // 
             // buttonCustomizacaoCC
             // 
@@ -79,22 +56,14 @@
             buttonCustomizacaoCC.UseVisualStyleBackColor = true;
             buttonCustomizacaoCC.Click += buttonCustomizacaoCC_Click_1;
             // 
-            // textBoxPesquisarCC
-            // 
-            textBoxPesquisarCC.Location = new Point(10, 9);
-            textBoxPesquisarCC.Margin = new Padding(3, 2, 3, 2);
-            textBoxPesquisarCC.Name = "textBoxPesquisarCC";
-            textBoxPesquisarCC.Size = new Size(506, 23);
-            textBoxPesquisarCC.TabIndex = 4;
-            // 
             // dataGridViewCadastroCliente
             // 
             dataGridViewCadastroCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCadastroCliente.Location = new Point(10, 50);
+            dataGridViewCadastroCliente.Location = new Point(10, 11);
             dataGridViewCadastroCliente.Margin = new Padding(3, 2, 3, 2);
             dataGridViewCadastroCliente.Name = "dataGridViewCadastroCliente";
             dataGridViewCadastroCliente.RowHeadersWidth = 51;
-            dataGridViewCadastroCliente.Size = new Size(679, 232);
+            dataGridViewCadastroCliente.Size = new Size(679, 271);
             dataGridViewCadastroCliente.TabIndex = 5;
             // 
             // TelaCadastroCliente
@@ -103,27 +72,19 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
             Controls.Add(dataGridViewCadastroCliente);
-            Controls.Add(textBoxPesquisarCC);
             Controls.Add(buttonCustomizacaoCC);
-            Controls.Add(buttonDeletarCC);
-            Controls.Add(buttonIncluirCC);
-            Controls.Add(buttonPesquisarCC);
+            Controls.Add(buttonCriarClienteCC);
             Margin = new Padding(3, 2, 3, 2);
             Name = "TelaCadastroCliente";
             Text = "CadastroCliente";
             Load += TelaCadastroCliente_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewCadastroCliente).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Button buttonPesquisarCC;
-        private Button buttonIncluirCC;
-        private Button buttonDeletarCC;
+        private Button buttonCriarClienteCC;
         private Button buttonCustomizacaoCC;
-        private TextBox textBoxPesquisarCC;
         private DataGridView dataGridViewCadastroCliente;
     }
 }

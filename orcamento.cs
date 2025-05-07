@@ -13,12 +13,5 @@
             TelaOrcamento.Show();
             this.Hide();
         }
-
-        private void buttonAlterarO_Click(object sender, EventArgs e)
-        {
-            Form TelaOrcamento = new TelaCustomizacao();
-            TelaOrcamento.Show();
-            this.Hide();
-        }
     }
 }

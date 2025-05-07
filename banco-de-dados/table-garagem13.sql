@@ -180,3 +180,6 @@ INNER JOIN aro a ON c.aro_id = a.id
 INNER JOIN quadro q ON c.quadro_id = q.id
 INNER JOIN cor co ON c.cor_id = co.id
 INNER JOIN motorizacao m ON c.motorizacao_id = m.id;
+
+
+SELECT id FROM endereco WHERE logradouro = @logradouro AND numero = @numero AND bairro = @bairro AND municipio = @municipio AND estado = @estado AND cep = @cep AND complemento = @complemento;

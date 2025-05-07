@@ -16,8 +16,5 @@
     <Compile Update="Orcamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Revisao.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

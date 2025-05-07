@@ -4,8 +4,6 @@ namespace garagem13
 {
     public partial class TelaCadastroCliente : Form
     {
-        //private readonly BindingSource BindingSource = [];
-
         public TelaCadastroCliente()
         {
             InitializeComponent();
@@ -16,15 +14,17 @@ namespace garagem13
             var telaInclusao = new TelaInclusaoCliente(this);
             telaInclusao.Show();
             this.Hide();
-
-            //Form TelaCadastroCliente = new TelaInclusaoCliente();
-            //TelaCadastroCliente.Show();
-            //this.Hide();
         }
 
         private void buttonCustomizacaoCC_Click_1(object sender, EventArgs e)
         {
-            Form TelaCadastroCliente = new TelaCustomizacao();
+            if (dataGridViewCadastroCliente.SelectedRows.Count <= 0 || dataGridViewCadastroCliente.SelectedRows[0].Cells.Count <= 0 || dataGridViewCadastroCliente.SelectedRows[0].Cells[0].Value == null)
+            {
+                return;
+            }
+
+            int idCliente = (int) dataGridViewCadastroCliente.SelectedRows[0].Cells[0].Value;
+            Form TelaCadastroCliente = new TelaCustomizacao(idCliente);
             TelaCadastroCliente.Show();
             this.Hide();
         }
@@ -40,13 +40,6 @@ namespace garagem13
         {
             AtualizarGrid();
         }
-
-        //private void FormCadastroCliente_Load(object sender, EventArgs e)
-        //{
-
-        //    BindingSource.DataSource = Cliente.ListarClientes();
-        //    dataGridViewCadastroCliente.DataSource = BindingSource;
-        //}
     }
 }
 

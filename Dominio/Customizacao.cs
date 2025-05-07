@@ -11,6 +11,9 @@ namespace garagem13.dominio
         public string? Cor { get; set; }
         public string? Tipo { get; set; }
         public string? Motorizacao { get; set; }
+        //public string? Tinta { get; set; }
+        //public string? Id_customizacao { get; set; }
+
 
         private readonly CustomizacaoRepositorio repositorio = new();
 

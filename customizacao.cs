@@ -1,29 +1,33 @@
-﻿namespace garagem13
+﻿using garagem13.dominio;
+
+namespace garagem13
 {
     public partial class TelaCustomizacao : Form
     {
-        public TelaCustomizacao()
+        private int idCliente { get; set; }
+
+        public TelaCustomizacao(int idCliente)
         {
             InitializeComponent();
+            this.idCliente = idCliente;
+
+            MessageBox.Show(idCliente.ToString());
         }
 
         private void buttonCriarPedidoC_Click(object sender, EventArgs e)
         {
-            Form TelaCustomizacao = new TelaRevisao();
-            TelaCustomizacao.Show();
+            Form TelaOrcamento = new TelaOrcamento();
+            TelaOrcamento.Show();
             this.Hide();
         }
 
         private void buttonVoltarC_Click(object sender, EventArgs e)
         {
-            Form TelaCustomizacao = new TelaCadastroCliente();
-            TelaCustomizacao.Show();
+            Form TelaCadastroCliente = new TelaCadastroCliente();
+            TelaCadastroCliente.Show();
             this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
