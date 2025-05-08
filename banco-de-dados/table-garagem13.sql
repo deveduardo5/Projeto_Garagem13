@@ -77,6 +77,8 @@ CREATE TABLE customizacao (
     FOREIGN KEY (cliente_id) REFERENCES cliente(id)
 );
 
+
+
 -- Tabela funcionario
 CREATE TABLE funcionario (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -143,6 +145,7 @@ VALUES
 ('Gabriel Gomes', 'ggomes@garagem13.com', '12345678'),
 ('Daniel Silva', 'dsilva@garagem13.com', '36912157');
 
+-- Select Teste
 SELECT
     c.id AS customizacao_id,
     c.tipo AS tipo_bike,
@@ -181,5 +184,60 @@ INNER JOIN quadro q ON c.quadro_id = q.id
 INNER JOIN cor co ON c.cor_id = co.id
 INNER JOIN motorizacao m ON c.motorizacao_id = m.id;
 
+SELECT * FROM endereco;
 
-SELECT id FROM endereco WHERE logradouro = @logradouro AND numero = @numero AND bairro = @bairro AND municipio = @municipio AND estado = @estado AND cep = @cep AND complemento = @complemento;
+
+-- Select ClienteRepositorio
+SELECT 
+    c.*,
+    e.logradouro,
+    e.numero,
+    e.complemento,
+    e.bairro,
+    e.municipio,
+    e.estado,
+    e.cep
+FROM
+    cliente c
+        JOIN
+    endereco e ON c.id_endereco = e.id;
+
+-- Select CustomizacaoRepositorio
+SELECT 
+    c.id AS customizacao_id,
+    c.tipo AS tipo_bike,
+    c.cliente_id,
+    cl.nome,
+    cl.email,
+    cl.telefone,
+    a.marca AS marca_aro,
+    a.tamanho_em_polegadas,
+    a.modelo AS modelo_aro,
+    a.preco AS preco_aro,
+    q.marca AS marca_quadro,
+    q.modelo AS modelo_quadro,
+    q.preco AS preco_quadro,
+    co.marca AS marca_tinta,
+    co.tipo_de_tinta,
+    co.preco AS preco_tinta,
+    m.marca AS marca_motor,
+    m.potencia AS potencia_motor,
+    m.modelo AS modelo_motor,
+    m.preco AS preco_motor
+FROM
+    customizacao c
+        INNER JOIN
+    cliente cl ON c.cliente_id = cl.id
+        INNER JOIN
+    aro a ON c.aro_id = a.id
+        INNER JOIN
+    quadro q ON c.quadro_id = q.id
+        INNER JOIN
+    cor co ON c.cor_id = co.id
+        INNER JOIN
+    motorizacao m ON c.motorizacao_id = m.id;
+
+
+
+
+

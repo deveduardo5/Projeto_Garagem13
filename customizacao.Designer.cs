@@ -30,23 +30,23 @@
         {
             buttonVoltarC = new Button();
             buttonCriarPedidoC = new Button();
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            groupBoxCustomizacao = new GroupBox();
+            buttonMontar = new Button();
             comboBox4 = new ComboBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            button2 = new Button();
-            button3 = new Button();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            comboBox3 = new ComboBox();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            labelMotorizacao = new Label();
+            labelCor = new Label();
+            labelQuadro = new Label();
+            labelAro = new Label();
+            groupBoxOrcamento = new GroupBox();
+            buttonCalcular = new Button();
+            dataGridViewOrcamento = new DataGridView();
+            buttonCancelarPedido = new Button();
+            groupBoxCustomizacao.SuspendLayout();
+            groupBoxOrcamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrcamento).BeginInit();
             SuspendLayout();
             // 
             // buttonVoltarC
@@ -69,94 +69,32 @@
             buttonCriarPedidoC.UseVisualStyleBackColor = true;
             buttonCriarPedidoC.Click += buttonCriarPedidoC_Click;
             // 
-            // groupBox1
+            // groupBoxCustomizacao
             // 
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(comboBox4);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(330, 264);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBoxCustomizacao.Controls.Add(buttonMontar);
+            groupBoxCustomizacao.Controls.Add(comboBox4);
+            groupBoxCustomizacao.Controls.Add(comboBox3);
+            groupBoxCustomizacao.Controls.Add(comboBox2);
+            groupBoxCustomizacao.Controls.Add(comboBox1);
+            groupBoxCustomizacao.Controls.Add(labelMotorizacao);
+            groupBoxCustomizacao.Controls.Add(labelCor);
+            groupBoxCustomizacao.Controls.Add(labelQuadro);
+            groupBoxCustomizacao.Controls.Add(labelAro);
+            groupBoxCustomizacao.Location = new Point(12, 12);
+            groupBoxCustomizacao.Name = "groupBoxCustomizacao";
+            groupBoxCustomizacao.Size = new Size(330, 264);
+            groupBoxCustomizacao.TabIndex = 4;
+            groupBoxCustomizacao.TabStop = false;
+            groupBoxCustomizacao.Text = "Customização";
             // 
-            // groupBox2
+            // buttonMontar
             // 
-            groupBox2.Controls.Add(button2);
-            groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Location = new Point(348, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(330, 264);
-            groupBox2.TabIndex = 5;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(14, 72);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(14, 108);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(14, 140);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 3;
-            label4.Text = "label4";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(58, 34);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(240, 23);
-            comboBox1.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(58, 69);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(240, 23);
-            comboBox2.TabIndex = 5;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(58, 105);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(240, 23);
-            comboBox3.TabIndex = 6;
+            buttonMontar.Location = new Point(103, 235);
+            buttonMontar.Name = "buttonMontar";
+            buttonMontar.Size = new Size(108, 23);
+            buttonMontar.TabIndex = 8;
+            buttonMontar.Text = "Montar Pedido";
+            buttonMontar.UseVisualStyleBackColor = true;
             // 
             // comboBox4
             // 
@@ -166,58 +104,120 @@
             comboBox4.Size = new Size(240, 23);
             comboBox4.TabIndex = 7;
             // 
-            // button1
+            // comboBox3
             // 
-            button1.Location = new Point(131, 235);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(58, 105);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(240, 23);
+            comboBox3.TabIndex = 6;
             // 
-            // dataGridView1
+            // comboBox2
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 22);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(318, 150);
-            dataGridView1.TabIndex = 0;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(58, 69);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(240, 23);
+            comboBox2.TabIndex = 5;
             // 
-            // button2
+            // comboBox1
             // 
-            button2.Location = new Point(138, 235);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 9;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(58, 34);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(240, 23);
+            comboBox1.TabIndex = 4;
             // 
-            // button3
+            // labelMotorizacao
             // 
-            button3.Location = new Point(12, 291);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 10;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            labelMotorizacao.AutoSize = true;
+            labelMotorizacao.Location = new Point(12, 145);
+            labelMotorizacao.Name = "labelMotorizacao";
+            labelMotorizacao.Size = new Size(40, 15);
+            labelMotorizacao.TabIndex = 3;
+            labelMotorizacao.Text = "Motor";
+            // 
+            // labelCor
+            // 
+            labelCor.AutoSize = true;
+            labelCor.Location = new Point(26, 113);
+            labelCor.Name = "labelCor";
+            labelCor.Size = new Size(26, 15);
+            labelCor.TabIndex = 2;
+            labelCor.Text = "Cor";
+            // 
+            // labelQuadro
+            // 
+            labelQuadro.AutoSize = true;
+            labelQuadro.Location = new Point(5, 77);
+            labelQuadro.Name = "labelQuadro";
+            labelQuadro.Size = new Size(47, 15);
+            labelQuadro.TabIndex = 1;
+            labelQuadro.Text = "Quadro";
+            // 
+            // labelAro
+            // 
+            labelAro.AutoSize = true;
+            labelAro.Location = new Point(26, 42);
+            labelAro.Name = "labelAro";
+            labelAro.Size = new Size(26, 15);
+            labelAro.TabIndex = 0;
+            labelAro.Text = "Aro";
+            // 
+            // groupBoxOrcamento
+            // 
+            groupBoxOrcamento.Controls.Add(buttonCalcular);
+            groupBoxOrcamento.Controls.Add(dataGridViewOrcamento);
+            groupBoxOrcamento.Location = new Point(348, 12);
+            groupBoxOrcamento.Name = "groupBoxOrcamento";
+            groupBoxOrcamento.Size = new Size(330, 264);
+            groupBoxOrcamento.TabIndex = 5;
+            groupBoxOrcamento.TabStop = false;
+            groupBoxOrcamento.Text = "Orçamento";
+            // 
+            // buttonCalcular
+            // 
+            buttonCalcular.Location = new Point(131, 235);
+            buttonCalcular.Name = "buttonCalcular";
+            buttonCalcular.Size = new Size(75, 23);
+            buttonCalcular.TabIndex = 9;
+            buttonCalcular.Text = "Calcular";
+            buttonCalcular.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewOrcamento
+            // 
+            dataGridViewOrcamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOrcamento.Location = new Point(6, 22);
+            dataGridViewOrcamento.Name = "dataGridViewOrcamento";
+            dataGridViewOrcamento.Size = new Size(318, 150);
+            dataGridViewOrcamento.TabIndex = 0;
+            // 
+            // buttonCancelarPedido
+            // 
+            buttonCancelarPedido.Location = new Point(12, 291);
+            buttonCancelarPedido.Name = "buttonCancelarPedido";
+            buttonCancelarPedido.Size = new Size(102, 23);
+            buttonCancelarPedido.TabIndex = 10;
+            buttonCancelarPedido.Text = "Cancelar Pedido";
+            buttonCancelarPedido.UseVisualStyleBackColor = true;
             // 
             // TelaCustomizacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
-            Controls.Add(button3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            Controls.Add(buttonCancelarPedido);
+            Controls.Add(groupBoxOrcamento);
+            Controls.Add(groupBoxCustomizacao);
             Controls.Add(buttonVoltarC);
             Controls.Add(buttonCriarPedidoC);
             Margin = new Padding(3, 2, 3, 2);
             Name = "TelaCustomizacao";
             Text = "Customizacao";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBoxCustomizacao.ResumeLayout(false);
+            groupBoxCustomizacao.PerformLayout();
+            groupBoxOrcamento.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrcamento).EndInit();
             ResumeLayout(false);
         }
 
@@ -225,19 +225,19 @@
 
         private Button buttonVoltarC;
         private Button buttonCriarPedidoC;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private Button button1;
+        private GroupBox groupBoxCustomizacao;
+        private GroupBox groupBoxOrcamento;
+        private Button buttonMontar;
         private ComboBox comboBox4;
         private ComboBox comboBox3;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Button button2;
-        private DataGridView dataGridView1;
-        private Button button3;
+        private Label labelMotorizacao;
+        private Label labelCor;
+        private Label labelQuadro;
+        private Label labelAro;
+        private Button buttonCalcular;
+        private DataGridView dataGridViewOrcamento;
+        private Button buttonCancelarPedido;
     }
 }

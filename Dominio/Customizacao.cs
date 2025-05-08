@@ -4,38 +4,40 @@ namespace garagem13.dominio
 {
     internal class Customizacao
     {
-        //public int Id { get; set; }
-        public int ClienteId { get; set; }
+        private readonly CustomizacaoRepositorio CustomizacaoRepositorio = new();
+
+        public int Id { get; set; }
         public string? Aro { get; set; }
         public string? Quadro { get; set; }
         public string? Cor { get; set; }
-        public string? Tipo { get; set; }
         public string? Motorizacao { get; set; }
-        //public string? Tinta { get; set; }
-        //public string? Id_customizacao { get; set; }
+        public Cliente? Cliente { get; set; }
 
-
-        private readonly CustomizacaoRepositorio repositorio = new();
-
-        public bool Criar()
+        public static List<Customizacao> ListarCustomizacao()
         {
-            if (!Validar())
-            {
-                return false;
-            }
-
-            repositorio.Criar(this);
-            return true;
+            CustomizacaoRepositorio repositorio = new();
+            return repositorio.ListarCustomizacao();
         }
 
-        private bool Validar()
-        {
-            return !string.IsNullOrWhiteSpace(Aro)
-                && !string.IsNullOrWhiteSpace(Quadro)
-                && !string.IsNullOrWhiteSpace(Cor)
-                && !string.IsNullOrWhiteSpace(Tipo)
-                && !string.IsNullOrWhiteSpace(Motorizacao)
-                && ClienteId > 0;
-        }
+        //public bool Criar()
+        //{
+        //    if (!Validar())
+        //    {
+        //        return false;
+        //    }
+
+        //    repositorio.Criar(this);
+        //    return true;
+        //}
+
+        //private bool Validar()
+        //{
+        //    return !string.IsNullOrWhiteSpace(Aro)
+        //        && !string.IsNullOrWhiteSpace(Quadro)
+        //        && !string.IsNullOrWhiteSpace(Cor)
+        //        && !string.IsNullOrWhiteSpace(Tipo)
+        //        && !string.IsNullOrWhiteSpace(Motorizacao)
+        //        && ClienteId > 0;
+        //}
     }
 }

@@ -14,6 +14,22 @@ namespace garagem13
             MessageBox.Show(idCliente.ToString());
         }
 
+        //private Customizacao customizacao = new();
+
+        //private readonly BindingSource BindingSource = new BindingSource();
+
+        //private bool CriarPedido()
+        //{
+        //    Customizacao = new Customizacao();
+
+        //    Customizacao.Aro = comboBoxAro.Text;
+        //    Customizacao.Quadro = comboBoxQuadro.Text;
+        //    Customizacao.Cor = comboBoxCor.Text;
+        //    Customizacao.Motorizacao = comboBoxMotorizacao.Text;
+
+        //    return true;
+        //}
+
         private void buttonCriarPedidoC_Click(object sender, EventArgs e)
         {
             Form TelaOrcamento = new TelaOrcamento();
@@ -27,7 +43,5 @@ namespace garagem13
             TelaCadastroCliente.Show();
             this.Hide();
         }
-
-
     }
 }
