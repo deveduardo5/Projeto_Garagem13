@@ -37,7 +37,7 @@ namespace garagem13
             if (funcionarioLogado != null)
             {
                 var TelaLoginUsuario = new TelaCadastroCliente();
-                TelaLoginUsuario.ShowDialog();
+                TelaLoginUsuario.Show();
                 this.Hide();
             }
             else

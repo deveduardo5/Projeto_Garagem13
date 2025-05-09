@@ -1,18 +1,131 @@
 ﻿using garagem13.banco_de_dados;
 using garagem13.dominio;
+using garagem13.Dominio;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace garagem13.Repositorio
 {
     internal class CustomizacaoRepositorio
     {
+        // LISTAR ARO
+        public List<Produto> ListarAros()
+        {
+            List<Produto> produtos = [];
+
+            using (var conn = DataBase.GetConnection())
+            {
+                conn.Open();
+
+                var query = "SELECT * FROM aro ORDER BY id;";
+
+                using var cmd = new MySqlCommand(query, conn);
+                using var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    produtos.Add(new Produto()
+                    {
+                        Id = reader.GetInt32("id"),
+                        Marca = reader.GetString("marca"),
+                        Modelo = reader.GetString("modelo"),
+                        TamanhoEmPolegadas = reader.GetInt32("tamanho_em_polegadas"),
+                        Preco = reader.GetDecimal("preco")
+                    });
+                }
+            }
+
+            return produtos;
+        }
+
+        // LISTAR QUADRO
+        public List<Produto> ListarQuadros()
+        {
+            List<Produto> produtos = [];
+
+            using (var conn = DataBase.GetConnection())
+            {
+                conn.Open();
+
+                var query = "SELECT * FROM quadro ORDER BY id;";
+
+                using var cmd = new MySqlCommand(query, conn);
+                using var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    produtos.Add(new Produto()
+                    {
+                        Id = reader.GetInt32("id"),
+                        Marca = reader.GetString("marca"),
+                        Modelo = reader.GetString("modelo"),
+                        TamanhoEmPolegadas = reader.GetInt32("tamanho_em_polegadas"),
+                        Preco = reader.GetDecimal("preco")
+                    });
+                }
+            }
+
+            return produtos;
+        }
+
+        // LISTAR COR
+        public List<Produto> ListarCores()
+        {
+            List<Produto> produtos = [];
+
+            using (var conn = DataBase.GetConnection())
+            {
+                conn.Open();
+
+                var query = "SELECT * FROM cor ORDER BY id;";
+
+                using var cmd = new MySqlCommand(query, conn);
+                using var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    produtos.Add(new Produto()
+                    {
+                        Id = reader.GetInt32("id"),
+                        Marca = reader.GetString("marca"),
+                        TipoDeTinta = reader.GetString("tipo_de_tinta"),
+                        Preco = reader.GetDecimal("preco")
+                    });
+                }
+            }
+
+            return produtos;
+        }
+
+        // LISTAR MOTOR
+        public List<Produto> ListarMotores()
+        {
+            List<Produto> produtos = [];
+
+            using (var conn = DataBase.GetConnection())
+            {
+                conn.Open();
+
+                var query = "SELECT * FROM motorizacao ORDER BY id;";
+
+                using var cmd = new MySqlCommand(query, conn);
+                using var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    produtos.Add(new Produto()
+                    {
+                        Id = reader.GetInt32("id"),
+                        Marca = reader.GetString("marca"),
+                        Modelo = reader.GetString("modelo"),
+                        Potencia = reader.GetInt32("potencia"),
+                        Preco = reader.GetDecimal("preco")
+                    });
+                }
+            }
+
+            return produtos;
+        }
+
         public List<Customizacao> ListarCustomizacao()
         {
             var customizacao = new List<Customizacao>();

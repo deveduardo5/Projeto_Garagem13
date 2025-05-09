@@ -20,6 +20,7 @@ namespace garagem13
         {
             if (dataGridViewCadastroCliente.SelectedRows.Count <= 0 || dataGridViewCadastroCliente.SelectedRows[0].Cells.Count <= 0 || dataGridViewCadastroCliente.SelectedRows[0].Cells[0].Value == null)
             {
+                MessageBox.Show("Selecione um cliente");
                 return;
             }
 

@@ -34,17 +34,17 @@ namespace garagem13
             Cliente.Email = textBoxEmail.Text;
             Cliente.Telefone = maskedTextBoxTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
 
-            string validacaoEndereco = Cliente.Endereco.Validar();
-            if (!string.IsNullOrWhiteSpace(validacaoEndereco))
-            {
-                labelErro.Text = validacaoEndereco;
-                return false;
-            }
-
             string validacaoCLiente = Cliente.Validar();
             if (!string.IsNullOrWhiteSpace(validacaoCLiente))
             {
                 labelErro.Text = validacaoCLiente;
+                return false;
+            }
+
+            string validacaoEndereco = Cliente.Endereco.Validar();
+            if (!string.IsNullOrWhiteSpace(validacaoEndereco))
+            {
+                labelErro.Text = validacaoEndereco;
                 return false;
             }
 

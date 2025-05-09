@@ -13,8 +13,5 @@
     <Compile Update="LoginUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Orcamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

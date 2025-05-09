@@ -1,40 +1,70 @@
 ﻿using garagem13.dominio;
+using garagem13.Dominio;
 
 namespace garagem13
 {
     public partial class TelaCustomizacao : Form
     {
-        private int idCliente { get; set; }
+        private int IdCliente { get; set; }
+        private List<Produto> Aros { get; set; }
+        private List<Produto> Quadros { get; set; }
+        private List<Produto> Cores { get; set; }
+        private List<Produto> Motores { get; set; }
+        private decimal Total { get; set; }
 
         public TelaCustomizacao(int idCliente)
         {
             InitializeComponent();
-            this.idCliente = idCliente;
+            this.IdCliente = idCliente;
 
-            MessageBox.Show(idCliente.ToString());
+            var Produto = new Produto();
+
+            Aros = Produto.ListarAros();
+            Quadros = Produto.ListarQuadros();
+            Cores = Produto.ListarCores();
+            Motores = Produto.ListarMotores();
         }
 
-        //private Customizacao customizacao = new();
+        private void TelaCustomizacao_Load(object sender, EventArgs e)
+        {
+            Aros.ForEach(a => comboBoxAro.Items.Add(a.GetStringAro()));
+            Quadros.ForEach(q => comboBoxQuadro.Items.Add(q.GetStringQuadro()));
+            Cores.ForEach(c => comboBoxCor.Items.Add(c.GetStringCor()));
+            Motores.ForEach(m => comboBoxMotor.Items.Add(m.GetStringMotor()));
+        }
 
-        //private readonly BindingSource BindingSource = new BindingSource();
+        private void CalcularTotal()
+        {
+            Total = (comboBoxAro.SelectedIndex < 0 ? 0 : Aros[comboBoxAro.SelectedIndex].Preco)
+                + (comboBoxQuadro.SelectedIndex < 0 ? 0 : Quadros[comboBoxQuadro.SelectedIndex].Preco)
+                + (comboBoxCor.SelectedIndex < 0 ? 0 : Cores[comboBoxCor.SelectedIndex].Preco)
+                + (comboBoxMotor.SelectedIndex < 0 ? 0 : Motores[comboBoxMotor.SelectedIndex].Preco);
 
-        //private bool CriarPedido()
-        //{
-        //    Customizacao = new Customizacao();
+            textBoxTotal.Text = $"R$ {Total}";
+        }
 
-        //    Customizacao.Aro = comboBoxAro.Text;
-        //    Customizacao.Quadro = comboBoxQuadro.Text;
-        //    Customizacao.Cor = comboBoxCor.Text;
-        //    Customizacao.Motorizacao = comboBoxMotorizacao.Text;
+        private void comboBoxAro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
 
-        //    return true;
-        //}
+        private void comboBoxQuadro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
 
+        private void comboBoxCor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
+
+        private void comboBoxMotor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
+        
         private void buttonCriarPedidoC_Click(object sender, EventArgs e)
         {
-            Form TelaOrcamento = new TelaOrcamento();
-            TelaOrcamento.Show();
-            this.Hide();
         }
 
         private void buttonVoltarC_Click(object sender, EventArgs e)

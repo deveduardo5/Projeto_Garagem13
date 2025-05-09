@@ -31,27 +31,22 @@
             buttonVoltarC = new Button();
             buttonCriarPedidoC = new Button();
             groupBoxCustomizacao = new GroupBox();
-            buttonMontar = new Button();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            textBoxTotal = new TextBox();
+            label1 = new Label();
+            comboBoxMotor = new ComboBox();
+            comboBoxCor = new ComboBox();
+            comboBoxQuadro = new ComboBox();
+            comboBoxAro = new ComboBox();
             labelMotorizacao = new Label();
             labelCor = new Label();
             labelQuadro = new Label();
             labelAro = new Label();
-            groupBoxOrcamento = new GroupBox();
-            buttonCalcular = new Button();
-            dataGridViewOrcamento = new DataGridView();
-            buttonCancelarPedido = new Button();
             groupBoxCustomizacao.SuspendLayout();
-            groupBoxOrcamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOrcamento).BeginInit();
             SuspendLayout();
             // 
             // buttonVoltarC
             // 
-            buttonVoltarC.Location = new Point(564, 291);
+            buttonVoltarC.Location = new Point(12, 303);
             buttonVoltarC.Name = "buttonVoltarC";
             buttonVoltarC.Size = new Size(114, 23);
             buttonVoltarC.TabIndex = 3;
@@ -61,9 +56,9 @@
             // 
             // buttonCriarPedidoC
             // 
-            buttonCriarPedidoC.Location = new Point(286, 291);
+            buttonCriarPedidoC.Location = new Point(494, 303);
             buttonCriarPedidoC.Name = "buttonCriarPedidoC";
-            buttonCriarPedidoC.Size = new Size(114, 23);
+            buttonCriarPedidoC.Size = new Size(194, 23);
             buttonCriarPedidoC.TabIndex = 2;
             buttonCriarPedidoC.Text = "Criar Pedido";
             buttonCriarPedidoC.UseVisualStyleBackColor = true;
@@ -71,62 +66,75 @@
             // 
             // groupBoxCustomizacao
             // 
-            groupBoxCustomizacao.Controls.Add(buttonMontar);
-            groupBoxCustomizacao.Controls.Add(comboBox4);
-            groupBoxCustomizacao.Controls.Add(comboBox3);
-            groupBoxCustomizacao.Controls.Add(comboBox2);
-            groupBoxCustomizacao.Controls.Add(comboBox1);
+            groupBoxCustomizacao.Controls.Add(textBoxTotal);
+            groupBoxCustomizacao.Controls.Add(label1);
+            groupBoxCustomizacao.Controls.Add(comboBoxMotor);
+            groupBoxCustomizacao.Controls.Add(comboBoxCor);
+            groupBoxCustomizacao.Controls.Add(comboBoxQuadro);
+            groupBoxCustomizacao.Controls.Add(comboBoxAro);
             groupBoxCustomizacao.Controls.Add(labelMotorizacao);
             groupBoxCustomizacao.Controls.Add(labelCor);
             groupBoxCustomizacao.Controls.Add(labelQuadro);
             groupBoxCustomizacao.Controls.Add(labelAro);
             groupBoxCustomizacao.Location = new Point(12, 12);
             groupBoxCustomizacao.Name = "groupBoxCustomizacao";
-            groupBoxCustomizacao.Size = new Size(330, 264);
+            groupBoxCustomizacao.Size = new Size(676, 243);
             groupBoxCustomizacao.TabIndex = 4;
             groupBoxCustomizacao.TabStop = false;
             groupBoxCustomizacao.Text = "Customização";
             // 
-            // buttonMontar
+            // textBoxTotal
             // 
-            buttonMontar.Location = new Point(103, 235);
-            buttonMontar.Name = "buttonMontar";
-            buttonMontar.Size = new Size(108, 23);
-            buttonMontar.TabIndex = 8;
-            buttonMontar.Text = "Montar Pedido";
-            buttonMontar.UseVisualStyleBackColor = true;
+            textBoxTotal.Location = new Point(552, 214);
+            textBoxTotal.Name = "textBoxTotal";
+            textBoxTotal.Size = new Size(118, 23);
+            textBoxTotal.TabIndex = 8;
+            textBoxTotal.Text = "R$ 0.00";
             // 
-            // comboBox4
+            // label1
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(58, 137);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(240, 23);
-            comboBox4.TabIndex = 7;
+            label1.AutoSize = true;
+            label1.Location = new Point(482, 217);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Valor Total:";
             // 
-            // comboBox3
+            // comboBoxMotor
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(58, 105);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(240, 23);
-            comboBox3.TabIndex = 6;
+            comboBoxMotor.FormattingEnabled = true;
+            comboBoxMotor.Location = new Point(58, 137);
+            comboBoxMotor.Name = "comboBoxMotor";
+            comboBoxMotor.Size = new Size(612, 23);
+            comboBoxMotor.TabIndex = 7;
+            comboBoxMotor.SelectedIndexChanged += comboBoxMotor_SelectedIndexChanged;
             // 
-            // comboBox2
+            // comboBoxCor
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(58, 69);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(240, 23);
-            comboBox2.TabIndex = 5;
+            comboBoxCor.FormattingEnabled = true;
+            comboBoxCor.Location = new Point(58, 105);
+            comboBoxCor.Name = "comboBoxCor";
+            comboBoxCor.Size = new Size(612, 23);
+            comboBoxCor.TabIndex = 6;
+            comboBoxCor.SelectedIndexChanged += comboBoxCor_SelectedIndexChanged;
             // 
-            // comboBox1
+            // comboBoxQuadro
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(58, 34);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(240, 23);
-            comboBox1.TabIndex = 4;
+            comboBoxQuadro.FormattingEnabled = true;
+            comboBoxQuadro.Location = new Point(58, 69);
+            comboBoxQuadro.Name = "comboBoxQuadro";
+            comboBoxQuadro.Size = new Size(612, 23);
+            comboBoxQuadro.TabIndex = 5;
+            comboBoxQuadro.SelectedIndexChanged += comboBoxQuadro_SelectedIndexChanged;
+            // 
+            // comboBoxAro
+            // 
+            comboBoxAro.FormattingEnabled = true;
+            comboBoxAro.Location = new Point(58, 34);
+            comboBoxAro.Name = "comboBoxAro";
+            comboBoxAro.Size = new Size(612, 23);
+            comboBoxAro.TabIndex = 4;
+            comboBoxAro.SelectedIndexChanged += comboBoxAro_SelectedIndexChanged;
             // 
             // labelMotorizacao
             // 
@@ -164,60 +172,20 @@
             labelAro.TabIndex = 0;
             labelAro.Text = "Aro";
             // 
-            // groupBoxOrcamento
-            // 
-            groupBoxOrcamento.Controls.Add(buttonCalcular);
-            groupBoxOrcamento.Controls.Add(dataGridViewOrcamento);
-            groupBoxOrcamento.Location = new Point(348, 12);
-            groupBoxOrcamento.Name = "groupBoxOrcamento";
-            groupBoxOrcamento.Size = new Size(330, 264);
-            groupBoxOrcamento.TabIndex = 5;
-            groupBoxOrcamento.TabStop = false;
-            groupBoxOrcamento.Text = "Orçamento";
-            // 
-            // buttonCalcular
-            // 
-            buttonCalcular.Location = new Point(131, 235);
-            buttonCalcular.Name = "buttonCalcular";
-            buttonCalcular.Size = new Size(75, 23);
-            buttonCalcular.TabIndex = 9;
-            buttonCalcular.Text = "Calcular";
-            buttonCalcular.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewOrcamento
-            // 
-            dataGridViewOrcamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOrcamento.Location = new Point(6, 22);
-            dataGridViewOrcamento.Name = "dataGridViewOrcamento";
-            dataGridViewOrcamento.Size = new Size(318, 150);
-            dataGridViewOrcamento.TabIndex = 0;
-            // 
-            // buttonCancelarPedido
-            // 
-            buttonCancelarPedido.Location = new Point(12, 291);
-            buttonCancelarPedido.Name = "buttonCancelarPedido";
-            buttonCancelarPedido.Size = new Size(102, 23);
-            buttonCancelarPedido.TabIndex = 10;
-            buttonCancelarPedido.Text = "Cancelar Pedido";
-            buttonCancelarPedido.UseVisualStyleBackColor = true;
-            // 
             // TelaCustomizacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
-            Controls.Add(buttonCancelarPedido);
-            Controls.Add(groupBoxOrcamento);
             Controls.Add(groupBoxCustomizacao);
             Controls.Add(buttonVoltarC);
             Controls.Add(buttonCriarPedidoC);
             Margin = new Padding(3, 2, 3, 2);
             Name = "TelaCustomizacao";
             Text = "Customizacao";
+            Load += TelaCustomizacao_Load;
             groupBoxCustomizacao.ResumeLayout(false);
             groupBoxCustomizacao.PerformLayout();
-            groupBoxOrcamento.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOrcamento).EndInit();
             ResumeLayout(false);
         }
 
@@ -226,18 +194,15 @@
         private Button buttonVoltarC;
         private Button buttonCriarPedidoC;
         private GroupBox groupBoxCustomizacao;
-        private GroupBox groupBoxOrcamento;
-        private Button buttonMontar;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxMotor;
+        private ComboBox comboBoxCor;
+        private ComboBox comboBoxQuadro;
+        private ComboBox comboBoxAro;
         private Label labelMotorizacao;
         private Label labelCor;
         private Label labelQuadro;
         private Label labelAro;
-        private Button buttonCalcular;
-        private DataGridView dataGridViewOrcamento;
-        private Button buttonCancelarPedido;
+        private Label label1;
+        private TextBox textBoxTotal;
     }
 }
