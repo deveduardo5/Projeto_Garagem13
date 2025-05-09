@@ -43,6 +43,13 @@ namespace garagem13
             textBoxTotal.Text = $"R$ {Total}";
         }
 
+        private void NavegarParaCliente()
+        {
+            Form TelaCadastroCliente = new TelaCadastroCliente();
+            TelaCadastroCliente.Show();
+            this.Hide();
+        }
+
         private void comboBoxAro_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalcularTotal();
@@ -65,13 +72,44 @@ namespace garagem13
         
         private void buttonCriarPedidoC_Click(object sender, EventArgs e)
         {
+            var customizacao = new Customizacao()
+            {
+                Cliente = IdCliente
+            };
+
+            if (comboBoxAro.SelectedIndex >= 0)
+            {
+                customizacao.Aro = Aros[comboBoxAro.SelectedIndex].Id;
+            }
+
+            if (comboBoxQuadro.SelectedIndex >= 0)
+            {
+                customizacao.Quadro = Quadros[comboBoxQuadro.SelectedIndex].Id;
+            }
+
+            if (comboBoxCor.SelectedIndex >= 0)
+            {
+                customizacao.Cor = Cores[comboBoxCor.SelectedIndex].Id;
+            }
+
+            if (comboBoxMotor.SelectedIndex >= 0)
+            {
+                customizacao.Motorizacao = Motores[comboBoxMotor.SelectedIndex].Id;
+            }
+
+            var resultado = customizacao.Criar();
+            if (!string.IsNullOrEmpty(resultado))
+            {
+                MessageBox.Show(resultado);
+                return;
+            }
+
+            NavegarParaCliente();
         }
 
         private void buttonVoltarC_Click(object sender, EventArgs e)
         {
-            Form TelaCadastroCliente = new TelaCadastroCliente();
-            TelaCadastroCliente.Show();
-            this.Hide();
+            NavegarParaCliente();
         }
     }
 }

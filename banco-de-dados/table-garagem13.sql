@@ -67,7 +67,7 @@ CREATE TABLE customizacao (
     aro_id INT NOT NULL,
     quadro_id INT NOT NULL,
     cor_id INT NOT NULL,
-    tipo VARCHAR(50) NOT NULL,
+    tipo VARCHAR(50) NULL,
     motorizacao_id INT NOT NULL,
     cliente_id INT NOT NULL,
     FOREIGN KEY (aro_id) REFERENCES aro(id),

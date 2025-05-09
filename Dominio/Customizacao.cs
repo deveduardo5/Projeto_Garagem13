@@ -7,37 +7,42 @@ namespace garagem13.dominio
         private readonly CustomizacaoRepositorio CustomizacaoRepositorio = new();
 
         public int Id { get; set; }
-        public string? Aro { get; set; }
-        public string? Quadro { get; set; }
-        public string? Cor { get; set; }
-        public string? Motorizacao { get; set; }
-        public Cliente? Cliente { get; set; }
+        public int Aro { get; set; }
+        public int Quadro { get; set; }
+        public int Cor { get; set; }
+        public int Motorizacao { get; set; }
+        public int Cliente { get; set; }
 
-        public static List<Customizacao> ListarCustomizacao()
+        //public static List<Customizacao> ListarCustomizacao()
+        //{
+        //    CustomizacaoRepositorio repositorio = new();
+        //    return repositorio.ListarCustomizacao();
+        //}
+
+        public string Criar()
         {
-            CustomizacaoRepositorio repositorio = new();
-            return repositorio.ListarCustomizacao();
+            if (Aro < 1)
+            {
+                return "Escolha um aro.";
+            }
+
+            if (Quadro < 1)
+            {
+                return "Escolha um quadro.";
+            }
+
+            if (Cor < 1)
+            {
+                return "Escolha uma cor.";
+            }
+
+            if (Motorizacao < 1)
+            {
+                return "Escolha um motor.";
+            }
+
+            CustomizacaoRepositorio.Criar(this);
+            return string.Empty;
         }
-
-        //public bool Criar()
-        //{
-        //    if (!Validar())
-        //    {
-        //        return false;
-        //    }
-
-        //    repositorio.Criar(this);
-        //    return true;
-        //}
-
-        //private bool Validar()
-        //{
-        //    return !string.IsNullOrWhiteSpace(Aro)
-        //        && !string.IsNullOrWhiteSpace(Quadro)
-        //        && !string.IsNullOrWhiteSpace(Cor)
-        //        && !string.IsNullOrWhiteSpace(Tipo)
-        //        && !string.IsNullOrWhiteSpace(Motorizacao)
-        //        && ClienteId > 0;
-        //}
     }
 }

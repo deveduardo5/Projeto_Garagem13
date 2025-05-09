@@ -65,6 +65,7 @@
             dataGridViewCadastroCliente.RowHeadersWidth = 51;
             dataGridViewCadastroCliente.Size = new Size(679, 271);
             dataGridViewCadastroCliente.TabIndex = 5;
+            dataGridViewCadastroCliente.CellContentClick += dataGridViewCadastroCliente_CellContentClick;
             // 
             // TelaCadastroCliente
             // 

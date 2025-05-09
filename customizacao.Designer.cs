@@ -41,7 +41,9 @@
             labelCor = new Label();
             labelQuadro = new Label();
             labelAro = new Label();
+            dataGridView1 = new DataGridView();
             groupBoxCustomizacao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // buttonVoltarC
@@ -56,11 +58,11 @@
             // 
             // buttonCriarPedidoC
             // 
-            buttonCriarPedidoC.Location = new Point(494, 303);
+            buttonCriarPedidoC.Location = new Point(173, 303);
             buttonCriarPedidoC.Name = "buttonCriarPedidoC";
             buttonCriarPedidoC.Size = new Size(194, 23);
             buttonCriarPedidoC.TabIndex = 2;
-            buttonCriarPedidoC.Text = "Criar Pedido";
+            buttonCriarPedidoC.Text = "Criar Customização";
             buttonCriarPedidoC.UseVisualStyleBackColor = true;
             buttonCriarPedidoC.Click += buttonCriarPedidoC_Click;
             // 
@@ -78,15 +80,17 @@
             groupBoxCustomizacao.Controls.Add(labelAro);
             groupBoxCustomizacao.Location = new Point(12, 12);
             groupBoxCustomizacao.Name = "groupBoxCustomizacao";
-            groupBoxCustomizacao.Size = new Size(676, 243);
+            groupBoxCustomizacao.Size = new Size(355, 243);
             groupBoxCustomizacao.TabIndex = 4;
             groupBoxCustomizacao.TabStop = false;
             groupBoxCustomizacao.Text = "Customização";
             // 
             // textBoxTotal
             // 
-            textBoxTotal.Location = new Point(552, 214);
+            textBoxTotal.Enabled = false;
+            textBoxTotal.Location = new Point(231, 214);
             textBoxTotal.Name = "textBoxTotal";
+            textBoxTotal.ReadOnly = true;
             textBoxTotal.Size = new Size(118, 23);
             textBoxTotal.TabIndex = 8;
             textBoxTotal.Text = "R$ 0.00";
@@ -94,7 +98,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(482, 217);
+            label1.Location = new Point(161, 217);
             label1.Name = "label1";
             label1.Size = new Size(64, 15);
             label1.TabIndex = 5;
@@ -105,7 +109,7 @@
             comboBoxMotor.FormattingEnabled = true;
             comboBoxMotor.Location = new Point(58, 137);
             comboBoxMotor.Name = "comboBoxMotor";
-            comboBoxMotor.Size = new Size(612, 23);
+            comboBoxMotor.Size = new Size(291, 23);
             comboBoxMotor.TabIndex = 7;
             comboBoxMotor.SelectedIndexChanged += comboBoxMotor_SelectedIndexChanged;
             // 
@@ -114,7 +118,7 @@
             comboBoxCor.FormattingEnabled = true;
             comboBoxCor.Location = new Point(58, 105);
             comboBoxCor.Name = "comboBoxCor";
-            comboBoxCor.Size = new Size(612, 23);
+            comboBoxCor.Size = new Size(291, 23);
             comboBoxCor.TabIndex = 6;
             comboBoxCor.SelectedIndexChanged += comboBoxCor_SelectedIndexChanged;
             // 
@@ -123,7 +127,7 @@
             comboBoxQuadro.FormattingEnabled = true;
             comboBoxQuadro.Location = new Point(58, 69);
             comboBoxQuadro.Name = "comboBoxQuadro";
-            comboBoxQuadro.Size = new Size(612, 23);
+            comboBoxQuadro.Size = new Size(291, 23);
             comboBoxQuadro.TabIndex = 5;
             comboBoxQuadro.SelectedIndexChanged += comboBoxQuadro_SelectedIndexChanged;
             // 
@@ -132,7 +136,7 @@
             comboBoxAro.FormattingEnabled = true;
             comboBoxAro.Location = new Point(58, 34);
             comboBoxAro.Name = "comboBoxAro";
-            comboBoxAro.Size = new Size(612, 23);
+            comboBoxAro.Size = new Size(291, 23);
             comboBoxAro.TabIndex = 4;
             comboBoxAro.SelectedIndexChanged += comboBoxAro_SelectedIndexChanged;
             // 
@@ -172,11 +176,20 @@
             labelAro.TabIndex = 0;
             labelAro.Text = "Aro";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(373, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(481, 243);
+            dataGridView1.TabIndex = 5;
+            // 
             // TelaCustomizacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(866, 338);
+            Controls.Add(dataGridView1);
             Controls.Add(groupBoxCustomizacao);
             Controls.Add(buttonVoltarC);
             Controls.Add(buttonCriarPedidoC);
@@ -186,6 +199,7 @@
             Load += TelaCustomizacao_Load;
             groupBoxCustomizacao.ResumeLayout(false);
             groupBoxCustomizacao.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -204,5 +218,6 @@
         private Label labelAro;
         private Label label1;
         private TextBox textBoxTotal;
+        private DataGridView dataGridView1;
     }
 }

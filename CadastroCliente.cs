@@ -24,7 +24,7 @@ namespace garagem13
                 return;
             }
 
-            int idCliente = (int) dataGridViewCadastroCliente.SelectedRows[0].Cells[0].Value;
+            int idCliente = (int)dataGridViewCadastroCliente.SelectedRows[0].Cells[0].Value;
             Form TelaCadastroCliente = new TelaCustomizacao(idCliente);
             TelaCadastroCliente.Show();
             this.Hide();
@@ -40,6 +40,11 @@ namespace garagem13
         private void TelaCadastroCliente_Load(object sender, EventArgs e)
         {
             AtualizarGrid();
+        }
+
+        private void dataGridViewCadastroCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
