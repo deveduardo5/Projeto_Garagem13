@@ -10,7 +10,7 @@ namespace garagem13.Dominio
     internal class Produto
     {
         public int Id { get; set; }
-        public string Marca { get; set; }
+        public string? Marca { get; set; }
         public string? Modelo { get; set; }
         public int? TamanhoEmPolegadas { get; set; }
         public string? TipoDeTinta { get; set; }

@@ -41,9 +41,9 @@
             labelCor = new Label();
             labelQuadro = new Label();
             labelAro = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridViewCustomizacao = new DataGridView();
             groupBoxCustomizacao.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCustomizacao).BeginInit();
             SuspendLayout();
             // 
             // buttonVoltarC
@@ -176,20 +176,21 @@
             labelAro.TabIndex = 0;
             labelAro.Text = "Aro";
             // 
-            // dataGridView1
+            // dataGridViewCustomizacao
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(373, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(481, 243);
-            dataGridView1.TabIndex = 5;
+            dataGridViewCustomizacao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCustomizacao.Location = new Point(373, 12);
+            dataGridViewCustomizacao.Name = "dataGridViewCustomizacao";
+            dataGridViewCustomizacao.Size = new Size(481, 243);
+            dataGridViewCustomizacao.TabIndex = 5;
+            dataGridViewCustomizacao.CellContentClick += dataGridView1_CellContentClick;
             // 
             // TelaCustomizacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(866, 338);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewCustomizacao);
             Controls.Add(groupBoxCustomizacao);
             Controls.Add(buttonVoltarC);
             Controls.Add(buttonCriarPedidoC);
@@ -199,7 +200,7 @@
             Load += TelaCustomizacao_Load;
             groupBoxCustomizacao.ResumeLayout(false);
             groupBoxCustomizacao.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCustomizacao).EndInit();
             ResumeLayout(false);
         }
 
@@ -218,6 +219,6 @@
         private Label labelAro;
         private Label label1;
         private TextBox textBoxTotal;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewCustomizacao;
     }
 }

@@ -1,4 +1,5 @@
-﻿using garagem13.Repositorio;
+﻿using garagem13.Dominio;
+using garagem13.Repositorio;
 
 namespace garagem13.dominio
 {
@@ -12,6 +13,7 @@ namespace garagem13.dominio
         public int Cor { get; set; }
         public int Motorizacao { get; set; }
         public int Cliente { get; set; }
+        public ListaCustomizacao? ListaCustomizacao { get; set; }
 
         //public static List<Customizacao> ListarCustomizacao()
         //{

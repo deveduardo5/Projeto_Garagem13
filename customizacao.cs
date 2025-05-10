@@ -1,5 +1,6 @@
 ﻿using garagem13.dominio;
 using garagem13.Dominio;
+using garagem13.Repositorio;
 
 namespace garagem13
 {
@@ -27,6 +28,9 @@ namespace garagem13
 
         private void TelaCustomizacao_Load(object sender, EventArgs e)
         {
+
+            AtualizarGrid();
+
             Aros.ForEach(a => comboBoxAro.Items.Add(a.GetStringAro()));
             Quadros.ForEach(q => comboBoxQuadro.Items.Add(q.GetStringQuadro()));
             Cores.ForEach(c => comboBoxCor.Items.Add(c.GetStringCor()));
@@ -69,7 +73,7 @@ namespace garagem13
         {
             CalcularTotal();
         }
-        
+
         private void buttonCriarPedidoC_Click(object sender, EventArgs e)
         {
             var customizacao = new Customizacao()
@@ -104,12 +108,117 @@ namespace garagem13
                 return;
             }
 
-            NavegarParaCliente();
+            AtualizarGrid();
+
+            //if (dataGridViewCustomizacao.SelectedRows.Count <= 0 || dataGridViewCustomizacao.SelectedRows[0].Cells.Count <= 0 || dataGridViewCustomizacao.SelectedRows[0].Cells[0].Value == null)
+            //{
+            //    MessageBox.Show("Selecione um cliente");
+            //    return;
+            //}
         }
+
+        //public void AtualizarGrid()
+        //{
+        //    BindingSource bs = new BindingSource();
+        //    var repo = new CustomizacaoRepositorio();
+        //    bs.DataSource = repo.ListarCustomizacao(IdCliente); // agora filtra por cliente   
+        //    dataGridViewCustomizacao.DataSource = bs;
+        //}
+
+        public void AtualizarGrid()
+        {
+            var repo = new CustomizacaoRepositorio();
+            var lista = repo.ListarCustomizacao(IdCliente);
+
+            dataGridViewCustomizacao.DataSource = null;
+            dataGridViewCustomizacao.AutoGenerateColumns = false;
+            dataGridViewCustomizacao.Columns.Clear();
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "CustomizacaoId",
+                HeaderText = "ID",
+                Width = 40
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "TipoBike",
+                HeaderText = "Tipo"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Nome",
+                HeaderText = "Cliente"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "MarcaAro",
+                HeaderText = "Aro"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "ModeloQuadro",
+                HeaderText = "Quadro"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "MarcaTinta",
+                HeaderText = "Cor"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "MarcaMotor",
+                HeaderText = "Motor"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "PrecoAro",
+                HeaderText = "R$ Aro"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "PrecoQuadro",
+                HeaderText = "R$ Quadro"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "PrecoTinta",
+                HeaderText = "R$ Cor"
+            });
+
+            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "PrecoMotor",
+                HeaderText = "R$ Motor"
+            });
+
+            dataGridViewCustomizacao.DataSource = lista;
+        }
+
+        //public void AtualizarGrid()
+        //{
+        //    BindingSource bs = new BindingSource();
+        //    bs.DataSource = Customizacao.ListarCustomizacao();
+        //    dataGridViewCustomizacao.DataSource = bs;
+        //}
 
         private void buttonVoltarC_Click(object sender, EventArgs e)
         {
             NavegarParaCliente();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

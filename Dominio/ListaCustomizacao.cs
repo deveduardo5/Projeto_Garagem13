@@ -1,48 +1,52 @@
-﻿using garagem13.dominio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using static System.ComponentModel.Design.ObjectSelectorEditor;
-
-namespace garagem13.Dominio
+﻿namespace garagem13.Dominio
 {
     internal class ListaCustomizacao
     {
-        //        SELECT
-        //    c.id AS customizacao_id,
-        //    cl.nome,
-        //    cl.email,
-        //    cl.telefone,
-        //    a.marca AS marca_aro,
-        //    a.tamanho_em_polegadas,
-        //    a.modelo AS modelo_aro,
-        //    a.preco AS preco_aro,
-        //    q.marca AS marca_quadro,
-        //    q.modelo AS modelo_quadro,
-        //    q.preco AS preco_quadro,
-        //    co.marca AS marca_tinta,
-        //    co.tipo_de_tinta,
-        //    co.preco AS preco_tinta,
-        //    m.marca AS marca_motor,
-        //    m.potencia AS potencia_motor,
-        //    m.modelo AS modelo_motor,
-        //    m.preco AS preco_motor
-        //FROM
-        //    customizacao c
-        //        INNER JOIN
-        //    cliente cl ON c.cliente_id = cl.id
-        //        INNER JOIN
-        //    aro a ON c.aro_id = a.id
-        //        INNER JOIN
-        //    quadro q ON c.quadro_id = q.id
-        //        INNER JOIN
-        //    cor co ON c.cor_id = co.id
-        //        INNER JOIN
-        //    motorizacao m ON c.motorizacao_id = m.id
-        //    WHERE c.cliente_id = @cliente_id;
+        public int CustomizacaoId { get; set; }
+        public int ClienteId { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Telefone { get; set; }
 
+        public string MarcaAro { get; set; }
+        public int TamanhoAro { get; set; }
+        public string ModeloAro { get; set; }
+        public decimal PrecoAro { get; set; }
+
+        public string MarcaQuadro { get; set; }
+        public string ModeloQuadro { get; set; }
+        public decimal PrecoQuadro { get; set; }
+
+        public string MarcaTinta { get; set; }
+        public string TipoTinta { get; set; }
+        public decimal PrecoTinta { get; set; }
+
+        public string MarcaMotor { get; set; }
+        public string ModeloMotor { get; set; }
+        public int PotenciaMotor { get; set; }
+        public decimal PrecoMotor { get; set; }
+
+        //public string? ClienteNome { get; set; }
+        //public string? ClienteEmail { get; set; }
+        //public string? ClienteTelefone { get; set; }
+
+
+        //public string? AroMarca { get; set; }
+        //public int AroTamanhoEmPolegadas { get; set; }
+        //public string? AroModelo { get; set; }
+        //public decimal AroPreco { get; set; }
+
+        //public string? QuadroMarca { get; set; }
+        //public string? QuadroModelo { get; set; }
+        //public decimal QuadroPreco { get; set; }
+
+        //public string? CorMarca { get; set; }
+        //public string? CorTipo { get; set; }
+        //public decimal CorPreco { get; set; }
+
+        //public string? MarcaMotor { get; set; }
+        //public int MotorPotencia { get; set; }
+        //public string? MotorModelo { get; set; }
+        //public decimal MotorPreco { get; set; }
     }
 }
