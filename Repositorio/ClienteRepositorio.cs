@@ -72,8 +72,6 @@ namespace garagem13.Repositorio
                     cmd.Parameters.AddWithValue("@idade", novoCliente.Idade);
                     cmd.Parameters.AddWithValue("@email", novoCliente.Email);
                     cmd.Parameters.AddWithValue("@telefone", novoCliente.Telefone);
-
-
                     cmd.Parameters.AddWithValue("@logradouro", novoCliente.Logradouro);
                     cmd.Parameters.AddWithValue("@numero", novoCliente.Numero);
                     cmd.Parameters.AddWithValue("@bairro", novoCliente.Bairro);
@@ -81,7 +79,6 @@ namespace garagem13.Repositorio
                     cmd.Parameters.AddWithValue("@estado", novoCliente.Estado);
                     cmd.Parameters.AddWithValue("@cep", novoCliente.CEP);
                     cmd.Parameters.AddWithValue("@complemento", novoCliente.Complemento);
-
 
                     cmd.ExecuteNonQuery();
                 }
