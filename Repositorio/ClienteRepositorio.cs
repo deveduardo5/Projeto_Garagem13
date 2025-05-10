@@ -15,7 +15,7 @@ namespace garagem13.Repositorio
             {
                 conn.Open();
 
-                string query = "SELECT c.*, e.logradouro, e.numero, e.complemento, e.bairro, e.municipio, e.estado, e.cep FROM cliente c JOIN endereco e ON c.id_endereco = e.id;";
+                string query = "SELECT  c.* FROM cliente c;";
 
                 using var cmd = new MySqlCommand(query, conn);
                 using var reader = cmd.ExecuteReader();
@@ -30,17 +30,13 @@ namespace garagem13.Repositorio
                         Idade = reader.GetString("idade"),
                         Email = reader.GetString("email"),
                         Telefone = reader.GetString("telefone"),
-                        Endereco = new Endereco
-                        {
-                            Id = reader.GetInt32("id_endereco"),
-                            Logradouro = reader.GetString("logradouro"),
-                            Numero = reader.GetString("numero"),
-                            Complemento = complemento,
-                            Bairro = reader.GetString("bairro"),
-                            Municipio = reader.GetString("municipio"),
-                            Estado = reader.GetString("estado"),
-                            CEP = reader.GetString("cep")
-                        }
+                        Logradouro = reader.GetString("logradouro"),
+                        Numero = reader.GetString("numero"),
+                        Complemento = complemento,
+                        Bairro = reader.GetString("bairro"),
+                        Municipio = reader.GetString("municipio"),
+                        Estado = reader.GetString("estado"),
+                        CEP = reader.GetString("cep")
                     });
                 }
             }
@@ -51,13 +47,13 @@ namespace garagem13.Repositorio
 
         public Cliente? BuscarClientePorEmail(string email)
         {
-            string query = "SELECT c.*, e.logradouro, e.numero, e.complemento, e.bairro, e.municipio, e.estado, e.cep FROM cliente c JOIN endereco e ON c.id_endereco = e.id WHERE c.email = @param;";
+            string query = "SELECT c.* FROM cliente c WHERE c.email = @param";
             return BuscarClientePorUnique(query, email);
         }
 
         public Cliente? BuscarClientePorTelefone(string telefone)
         {
-            string query = "SELECT c.*, e.logradouro, e.numero, e.complemento, e.bairro, e.municipio, e.estado, e.cep FROM cliente c JOIN endereco e ON c.id_endereco = e.id WHERE c.telefone = @param;";
+            string query = "SELECT c.* FROM cliente c WHERE c.telefone = @param";
             return BuscarClientePorUnique(query, telefone);
         }
 
@@ -67,58 +63,26 @@ namespace garagem13.Repositorio
             {
                 conn.Open();
 
-                string queryEndereco = "INSERT INTO endereco (logradouro, numero, bairro, municipio, estado, cep, complemento) " +
-                                       "VALUES (@logradouro, @numero, @bairro, @municipio, @estado, @cep, @complemento);";
-                using (var cmd = new MySqlCommand(queryEndereco, conn))
-                {
-                    if (novoCliente.Endereco == null)
-                    {
-                        throw new ArgumentNullException(nameof(novoCliente.Endereco), "O endereço do cliente não pode ser nulo.");
-                    }
+                string query = "INSERT INTO cliente (nome, idade, email, telefone, logradouro, numero, bairro, municipio, estado, cep, complemento) " +
+                               "VALUES (@nome, @idade, @email, @telefone, @logradouro, @numero, @bairro, @municipio, @estado, @cep, @complemento);";
 
-                    cmd.Parameters.AddWithValue("@logradouro", novoCliente.Endereco.Logradouro);
-                    cmd.Parameters.AddWithValue("@numero", novoCliente.Endereco.Numero);
-                    cmd.Parameters.AddWithValue("@bairro", novoCliente.Endereco.Bairro);
-                    cmd.Parameters.AddWithValue("@municipio", novoCliente.Endereco.Municipio);
-                    cmd.Parameters.AddWithValue("@estado", novoCliente.Endereco.Estado);
-                    cmd.Parameters.AddWithValue("@cep", novoCliente.Endereco.CEP);
-                    cmd.Parameters.AddWithValue("@complemento", novoCliente.Endereco.Complemento);
-                    cmd.ExecuteNonQuery();
-                }
-
-                int idEndereco = -1;
-                string queryIdEndereco = "SELECT id FROM endereco " +
-                                            "WHERE logradouro = @logradouro " +
-                                            "AND numero = @numero " +
-                                            "AND bairro = @bairro " +
-                                            "AND municipio = @municipio " +
-                                            "AND estado = @estado " +
-                                            "AND cep = @cep " +
-                                            "AND complemento = @complemento;";
-                using (var cmd = new MySqlCommand(queryIdEndereco, conn))
-                {
-                    cmd.Parameters.AddWithValue("@logradouro", novoCliente.Endereco.Logradouro);
-                    cmd.Parameters.AddWithValue("@numero", novoCliente.Endereco.Numero);
-                    cmd.Parameters.AddWithValue("@bairro", novoCliente.Endereco.Bairro);
-                    cmd.Parameters.AddWithValue("@municipio", novoCliente.Endereco.Municipio);
-                    cmd.Parameters.AddWithValue("@estado", novoCliente.Endereco.Estado);
-                    cmd.Parameters.AddWithValue("@cep", novoCliente.Endereco.CEP);
-                    cmd.Parameters.AddWithValue("@complemento", novoCliente.Endereco.Complemento);
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        idEndereco = reader.Read() ? reader.GetInt32("id") : -1;
-                    }
-                }
-
-                string query = "INSERT INTO cliente (nome, idade, id_endereco, email, telefone) " +
-                               "VALUES (@nome, @idade, @id_endereco, @email, @telefone);";
                 using (var cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@nome", novoCliente.Nome);
                     cmd.Parameters.AddWithValue("@idade", novoCliente.Idade);
-                    cmd.Parameters.AddWithValue("@id_endereco", idEndereco);
                     cmd.Parameters.AddWithValue("@email", novoCliente.Email);
                     cmd.Parameters.AddWithValue("@telefone", novoCliente.Telefone);
+
+
+                    cmd.Parameters.AddWithValue("@logradouro", novoCliente.Logradouro);
+                    cmd.Parameters.AddWithValue("@numero", novoCliente.Numero);
+                    cmd.Parameters.AddWithValue("@bairro", novoCliente.Bairro);
+                    cmd.Parameters.AddWithValue("@municipio", novoCliente.Municipio);
+                    cmd.Parameters.AddWithValue("@estado", novoCliente.Estado);
+                    cmd.Parameters.AddWithValue("@cep", novoCliente.CEP);
+                    cmd.Parameters.AddWithValue("@complemento", novoCliente.Complemento);
+
+
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -133,13 +97,12 @@ namespace garagem13.Repositorio
                 using (var cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@param", param);
+
                     using var reader = cmd.ExecuteReader();
                     if (!reader.Read())
                     {
                         return null;
                     }
-
-                    var complemento = !reader.IsDBNull("complemento") ? reader.GetString("complemento") : "";
 
                     return new Cliente
                     {
@@ -148,17 +111,13 @@ namespace garagem13.Repositorio
                         Idade = reader.GetString("idade"),
                         Email = reader.GetString("email"),
                         Telefone = reader.GetString("telefone"),
-                        Endereco = new Endereco
-                        {
-                            Id = reader.GetInt32("id_endereco"),
-                            Logradouro = reader.GetString("logradouro"),
-                            Numero = reader.GetString("numero"),
-                            Complemento = complemento,
-                            Bairro = reader.GetString("bairro"),
-                            Municipio = reader.GetString("municipio"),
-                            Estado = reader.GetString("estado"),
-                            CEP = reader.GetString("cep")
-                        }
+                        Logradouro = reader.GetString("logradouro"),
+                        Numero = reader.GetString("numero"),
+                        Complemento = reader.GetString("complemento"),
+                        Bairro = reader.GetString("bairro"),
+                        Municipio = reader.GetString("municipio"),
+                        Estado = reader.GetString("estado"),
+                        CEP = reader.GetString("cep")
                     };
                 }
             }

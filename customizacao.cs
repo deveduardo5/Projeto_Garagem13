@@ -109,21 +109,7 @@ namespace garagem13
             }
 
             AtualizarGrid();
-
-            //if (dataGridViewCustomizacao.SelectedRows.Count <= 0 || dataGridViewCustomizacao.SelectedRows[0].Cells.Count <= 0 || dataGridViewCustomizacao.SelectedRows[0].Cells[0].Value == null)
-            //{
-            //    MessageBox.Show("Selecione um cliente");
-            //    return;
-            //}
         }
-
-        //public void AtualizarGrid()
-        //{
-        //    BindingSource bs = new BindingSource();
-        //    var repo = new CustomizacaoRepositorio();
-        //    bs.DataSource = repo.ListarCustomizacao(IdCliente); // agora filtra por cliente   
-        //    dataGridViewCustomizacao.DataSource = bs;
-        //}
 
         public void AtualizarGrid()
         {
@@ -139,12 +125,6 @@ namespace garagem13
                 DataPropertyName = "CustomizacaoId",
                 HeaderText = "ID",
                 Width = 40
-            });
-
-            dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
-            {
-                DataPropertyName = "TipoBike",
-                HeaderText = "Tipo"
             });
 
             dataGridViewCustomizacao.Columns.Add(new DataGridViewTextBoxColumn
@@ -204,21 +184,9 @@ namespace garagem13
             dataGridViewCustomizacao.DataSource = lista;
         }
 
-        //public void AtualizarGrid()
-        //{
-        //    BindingSource bs = new BindingSource();
-        //    bs.DataSource = Customizacao.ListarCustomizacao();
-        //    dataGridViewCustomizacao.DataSource = bs;
-        //}
-
         private void buttonVoltarC_Click(object sender, EventArgs e)
         {
             NavegarParaCliente();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

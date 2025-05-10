@@ -1,9 +1,4 @@
 ﻿using garagem13.Repositorio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace garagem13.Dominio
 {

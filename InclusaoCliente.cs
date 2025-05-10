@@ -4,10 +4,7 @@ namespace garagem13
 {
     public partial class TelaInclusaoCliente : Form
     {
-        private Cliente Cliente = new()
-        {
-            Endereco = new()
-        };
+        private Cliente Cliente = new();
 
         private readonly BindingSource BindingSource = new BindingSource();
 
@@ -19,32 +16,23 @@ namespace garagem13
         private bool CriarCliente()
         {
             Cliente = new Cliente();
-            Cliente.Endereco = new Endereco();
-
-            Cliente.Endereco.Logradouro = textBoxLogradouro.Text;
-            Cliente.Endereco.Numero = textBoxNumero.Text;
-            Cliente.Endereco.Bairro = textBoxBairro.Text;
-            Cliente.Endereco.CEP = maskedTextBoxCEP.Text.Replace("-", "");
-            Cliente.Endereco.Municipio = textBoxMunicipio.Text;
-            Cliente.Endereco.Estado = textBoxEstado.Text;
-            Cliente.Endereco.Complemento = textBoxComplemento.Text;
 
             Cliente.Nome = textBoxNome.Text;
             Cliente.Idade = textBoxIdade.Text;
             Cliente.Email = textBoxEmail.Text;
             Cliente.Telefone = maskedTextBoxTelefone.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
+            Cliente.Logradouro = textBoxLogradouro.Text;
+            Cliente.Numero = textBoxNumero.Text;
+            Cliente.Bairro = textBoxBairro.Text;
+            Cliente.CEP = maskedTextBoxCEP.Text.Replace("-", "");
+            Cliente.Municipio = textBoxMunicipio.Text;
+            Cliente.Estado = textBoxEstado.Text;
+            Cliente.Complemento = textBoxComplemento.Text;
 
             string validacaoCLiente = Cliente.Validar();
             if (!string.IsNullOrWhiteSpace(validacaoCLiente))
             {
                 labelErro.Text = validacaoCLiente;
-                return false;
-            }
-
-            string validacaoEndereco = Cliente.Endereco.Validar();
-            if (!string.IsNullOrWhiteSpace(validacaoEndereco))
-            {
-                labelErro.Text = validacaoEndereco;
                 return false;
             }
 

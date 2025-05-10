@@ -41,11 +41,6 @@ namespace garagem13
         {
             AtualizarGrid();
         }
-
-        private void dataGridViewCadastroCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
 

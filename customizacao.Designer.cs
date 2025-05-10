@@ -183,7 +183,6 @@
             dataGridViewCustomizacao.Name = "dataGridViewCustomizacao";
             dataGridViewCustomizacao.Size = new Size(481, 243);
             dataGridViewCustomizacao.TabIndex = 5;
-            dataGridViewCustomizacao.CellContentClick += dataGridView1_CellContentClick;
             // 
             // TelaCustomizacao
             // 
