@@ -78,5 +78,20 @@ namespace garagem13
             TelaInclusaoCliente.Show();
             this.Hide();
         }
+
+        private void TelaInclusaoCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCEP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMunicipio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

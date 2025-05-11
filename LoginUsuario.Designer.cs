@@ -28,21 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLoginUsuario));
             buttonEntrar = new Button();
             textBoxSenhaLU = new TextBox();
             textBoxEmailLU = new TextBox();
-            labelSenhaLU = new Label();
-            labelEmailLU = new Label();
             labelTitulo = new Label();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // buttonEntrar
             // 
-            buttonEntrar.Location = new Point(381, 398);
+            buttonEntrar.Location = new Point(149, 433);
+            buttonEntrar.Margin = new Padding(4);
             buttonEntrar.Name = "buttonEntrar";
-            buttonEntrar.Size = new Size(94, 29);
+            buttonEntrar.Size = new Size(118, 35);
             buttonEntrar.TabIndex = 13;
             buttonEntrar.Text = "Entrar";
             buttonEntrar.UseVisualStyleBackColor = true;
@@ -50,73 +54,86 @@
             // 
             // textBoxSenhaLU
             // 
-            textBoxSenhaLU.Location = new Point(319, 307);
+            textBoxSenhaLU.Location = new Point(99, 367);
+            textBoxSenhaLU.Margin = new Padding(4);
             textBoxSenhaLU.Name = "textBoxSenhaLU";
-            textBoxSenhaLU.Size = new Size(229, 27);
+            textBoxSenhaLU.Size = new Size(257, 31);
             textBoxSenhaLU.TabIndex = 12;
+            textBoxSenhaLU.UseSystemPasswordChar = true;
+            textBoxSenhaLU.TextChanged += textBoxSenhaLU_TextChanged;
             // 
             // textBoxEmailLU
             // 
-            textBoxEmailLU.Location = new Point(319, 259);
+            textBoxEmailLU.Location = new Point(99, 301);
+            textBoxEmailLU.Margin = new Padding(4);
             textBoxEmailLU.Name = "textBoxEmailLU";
-            textBoxEmailLU.Size = new Size(229, 27);
+            textBoxEmailLU.Size = new Size(257, 31);
             textBoxEmailLU.TabIndex = 11;
-            // 
-            // labelSenhaLU
-            // 
-            labelSenhaLU.AutoSize = true;
-            labelSenhaLU.Location = new Point(255, 317);
-            labelSenhaLU.Name = "labelSenhaLU";
-            labelSenhaLU.Size = new Size(49, 20);
-            labelSenhaLU.TabIndex = 9;
-            labelSenhaLU.Text = "Senha";
-            // 
-            // labelEmailLU
-            // 
-            labelEmailLU.AutoSize = true;
-            labelEmailLU.Location = new Point(255, 269);
-            labelEmailLU.Name = "labelEmailLU";
-            labelEmailLU.Size = new Size(52, 20);
-            labelEmailLU.TabIndex = 8;
-            labelEmailLU.Text = "E-mail";
+            textBoxEmailLU.TextChanged += textBoxEmailLU_TextChanged;
             // 
             // labelTitulo
             // 
             labelTitulo.AutoSize = true;
             labelTitulo.BackColor = SystemColors.Control;
             labelTitulo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTitulo.Location = new Point(319, 212);
+            labelTitulo.Location = new Point(399, 265);
+            labelTitulo.Margin = new Padding(4, 0, 4, 0);
             labelTitulo.Name = "labelTitulo";
-            labelTitulo.Size = new Size(215, 28);
+            labelTitulo.Size = new Size(0, 32);
             labelTitulo.TabIndex = 7;
-            labelTitulo.Text = "Entre com seu usuário";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.original_0E2F809E_0FEB_45EE_B16D_009238021042;
-            pictureBox1.Location = new Point(279, 1);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(27, 14);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(307, 207);
+            pictureBox1.Size = new Size(338, 265);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(27, 287);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(65, 45);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 15;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(27, 352);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(65, 46);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 16;
+            pictureBox3.TabStop = false;
+            // 
             // TelaLoginUsuario
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(870, 451);
+            ClientSize = new Size(425, 500);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(buttonEntrar);
             Controls.Add(textBoxSenhaLU);
             Controls.Add(textBoxEmailLU);
-            Controls.Add(labelSenhaLU);
-            Controls.Add(labelEmailLU);
             Controls.Add(labelTitulo);
+            Margin = new Padding(4);
             Name = "TelaLoginUsuario";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginUsuario";
+            Load += TelaLoginUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,9 +143,9 @@
         private Button buttonEntrar;
         private TextBox textBoxSenhaLU;
         private TextBox textBoxEmailLU;
-        private Label labelSenhaLU;
-        private Label labelEmailLU;
         private Label labelTitulo;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

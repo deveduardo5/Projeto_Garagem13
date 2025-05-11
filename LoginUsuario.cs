@@ -45,5 +45,25 @@ namespace garagem13
                 MessageBox.Show("Email ou senha inválidos.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBoxEmailLU_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TelaLoginUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxSenhaLU_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,15 +31,17 @@
             buttonCriarClienteCC = new Button();
             buttonCustomizacaoCC = new Button();
             dataGridViewCadastroCliente = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCadastroCliente).BeginInit();
             SuspendLayout();
             // 
             // buttonCriarClienteCC
             // 
-            buttonCriarClienteCC.Location = new Point(10, 307);
-            buttonCriarClienteCC.Margin = new Padding(3, 2, 3, 2);
+            buttonCriarClienteCC.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonCriarClienteCC.Location = new Point(17, 457);
+            buttonCriarClienteCC.Margin = new Padding(4, 3, 4, 3);
             buttonCriarClienteCC.Name = "buttonCriarClienteCC";
-            buttonCriarClienteCC.Size = new Size(156, 22);
+            buttonCriarClienteCC.Size = new Size(223, 37);
             buttonCriarClienteCC.TabIndex = 1;
             buttonCriarClienteCC.Text = "Criar Cliente";
             buttonCriarClienteCC.UseVisualStyleBackColor = true;
@@ -47,10 +49,11 @@
             // 
             // buttonCustomizacaoCC
             // 
-            buttonCustomizacaoCC.Location = new Point(534, 307);
-            buttonCustomizacaoCC.Margin = new Padding(3, 2, 3, 2);
+            buttonCustomizacaoCC.Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonCustomizacaoCC.Location = new Point(764, 457);
+            buttonCustomizacaoCC.Margin = new Padding(4, 3, 4, 3);
             buttonCustomizacaoCC.Name = "buttonCustomizacaoCC";
-            buttonCustomizacaoCC.Size = new Size(156, 22);
+            buttonCustomizacaoCC.Size = new Size(223, 37);
             buttonCustomizacaoCC.TabIndex = 3;
             buttonCustomizacaoCC.Text = "Customização";
             buttonCustomizacaoCC.UseVisualStyleBackColor = true;
@@ -59,32 +62,47 @@
             // dataGridViewCadastroCliente
             // 
             dataGridViewCadastroCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCadastroCliente.Location = new Point(10, 11);
-            dataGridViewCadastroCliente.Margin = new Padding(3, 2, 3, 2);
+            dataGridViewCadastroCliente.Location = new Point(17, 65);
+            dataGridViewCadastroCliente.Margin = new Padding(4, 3, 4, 3);
             dataGridViewCadastroCliente.Name = "dataGridViewCadastroCliente";
             dataGridViewCadastroCliente.RowHeadersWidth = 51;
-            dataGridViewCadastroCliente.Size = new Size(679, 271);
+            dataGridViewCadastroCliente.Size = new Size(970, 367);
             dataGridViewCadastroCliente.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(14, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(431, 43);
+            label1.TabIndex = 6;
+            label1.Text = "Clientes Cadastrados";
+            label1.Click += label1_Click;
             // 
             // TelaCadastroCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(1000, 510);
+            Controls.Add(label1);
             Controls.Add(dataGridViewCadastroCliente);
             Controls.Add(buttonCustomizacaoCC);
             Controls.Add(buttonCriarClienteCC);
-            Margin = new Padding(3, 2, 3, 2);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "TelaCadastroCliente";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CadastroCliente";
             Load += TelaCadastroCliente_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewCadastroCliente).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private Button buttonCriarClienteCC;
         private Button buttonCustomizacaoCC;
         private DataGridView dataGridViewCadastroCliente;
+        private Label label1;
     }
 }
